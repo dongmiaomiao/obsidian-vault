@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782108650121-2o3ufepw0",
+  "providerId": "claude",
+  "title": "Summarize new ready-to-use content",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782108650122,
+  "updatedAt": 1782295135859,
+  "lastResponseAt": 1782108698426,
+  "sessionId": "a094f595-0a3e-46b7-8c7a-bacba5e15870",
+  "providerState": {
+    "providerSessionId": "a094f595-0a3e-46b7-8c7a-bacba5e15870"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 65,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 25472,
+    "contextWindow": 200000,
+    "contextTokens": 25537,
+    "percentage": 13,
+    "contextWindowIsAuthoritative": true
+  }
+}

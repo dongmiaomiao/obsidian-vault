@@ -1,0 +1,51 @@
+{
+  "autoRecalculate": true,
+  "cache": {},
+  "dailyNoteDateFormat": "YYYY-MM-DD",
+  "dailyNoteFolder": "0-日记",
+  "dayStartHour": 5,
+  "expandedRoutineIds": [],
+  "expandedWidgetTaskRoutineIds": [],
+  "mainSyncDevice": "",
+  "overviewPet": "dog",
+  "routines": [
+    {
+      "id": "routine-morning",
+      "label": "晨间习惯",
+      "tag": "#routine/morning",
+      "enabled": true,
+      "schedule": {
+        "type": "weekdays",
+        "weekdays": [1, 2, 3, 4, 5, 6, 0]
+      },
+      "templateItems": [
+        { "text": "早起喝水", "lineNumber": 0 },
+        { "text": "晨间冥想", "lineNumber": 1 },
+        { "text": "阅读 30 分钟", "lineNumber": 2 }
+      ],
+      "freezePeriods": []
+    },
+    {
+      "id": "routine-evening",
+      "label": "晚间习惯",
+      "tag": "#routine/evening",
+      "enabled": true,
+      "schedule": {
+        "type": "weekdays",
+        "weekdays": [1, 2, 3, 4, 5, 6, 0]
+      },
+      "templateItems": [
+        { "text": "复盘今日", "lineNumber": 0 },
+        { "text": "规划明日", "lineNumber": 1 }
+      ],
+      "freezePeriods": []
+    }
+  ],
+  "scriptableExportPath": "Routine Streaks/data.json",
+  "scriptableRoutineId": "",
+  "scriptableTodayRoutineIds": [],
+  "scriptableWidgetFamily": "medium",
+  "scriptableWidgetType": "dashboard",
+  "weekStartDay": 1,
+  "widgetLayout": {}
+}

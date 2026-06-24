@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782108441042-6qrncc6ug",
+  "providerId": "claude",
+  "title": "Scrape 姜胡说 Douyin videos",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782108441086,
+  "updatedAt": 1782108583784,
+  "lastResponseAt": 1782108520230,
+  "sessionId": "48879c61-b588-4e3f-80eb-41c19064cba0",
+  "providerState": {
+    "providerSessionId": "48879c61-b588-4e3f-80eb-41c19064cba0"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 803,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 23936,
+    "contextWindow": 200000,
+    "contextTokens": 24739,
+    "percentage": 12,
+    "contextWindowIsAuthoritative": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+	"id": "routine-streaks",
+	"name": "Routine Streaks",
+	"version": "1.2.3",
+	"minAppVersion": "1.4.10",
+	"description": "Track routine streaks from tagged Daily Note tasks.",
+	"author": "Taehyun A. Kim",
+	"authorUrl": "https://github.com/HolyHooly",
+	"isDesktopOnly": false
+}

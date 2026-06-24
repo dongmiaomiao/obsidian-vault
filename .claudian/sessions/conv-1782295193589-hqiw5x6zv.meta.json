@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782295193589-hqiw5x6zv",
+  "providerId": "claude",
+  "title": "Split document into 40-page chunks",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782295193591,
+  "updatedAt": 1782318292092,
+  "lastResponseAt": 1782318292092,
+  "sessionId": "19e1a8ae-061a-423b-9916-42272604e1d2",
+  "providerState": {
+    "providerSessionId": "19e1a8ae-061a-423b-9916-42272604e1d2"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 84,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 78848,
+    "contextWindow": 200000,
+    "contextTokens": 78932,
+    "percentage": 39,
+    "contextWindowIsAuthoritative": true
+  }
+}
