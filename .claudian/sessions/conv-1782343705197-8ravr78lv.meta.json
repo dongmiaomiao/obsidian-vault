@@ -1,0 +1,24 @@
+{
+  "id": "conv-1782343705197-8ravr78lv",
+  "providerId": "claude",
+  "title": "Find electronic version of a book",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782343705198,
+  "updatedAt": 1782343725977,
+  "lastResponseAt": 1782343725977,
+  "sessionId": "5c73107c-ae41-426c-b897-0ccd7b60b0c2",
+  "providerState": {
+    "providerSessionId": "5c73107c-ae41-426c-b897-0ccd7b60b0c2"
+  },
+  "currentNote": "认知觉醒/第七章/情绪力-情绪是多角度看问题的智慧.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 767,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 20608,
+    "contextWindow": 200000,
+    "contextTokens": 21375,
+    "percentage": 11,
+    "contextWindowIsAuthoritative": true
+  }
+}
