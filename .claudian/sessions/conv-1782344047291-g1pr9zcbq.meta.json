@@ -4,20 +4,20 @@
   "title": "Implement book note knowledge system",
   "titleGenerationStatus": "success",
   "createdAt": 1782344047292,
-  "updatedAt": 1782344215675,
-  "lastResponseAt": 1782344215675,
+  "updatedAt": 1782344846957,
+  "lastResponseAt": 1782344846957,
   "sessionId": "d1ce26f4-a042-4895-9d7e-ce592d869436",
   "providerState": {
     "providerSessionId": "d1ce26f4-a042-4895-9d7e-ce592d869436"
   },
   "usage": {
     "model": "haiku",
-    "inputTokens": 53,
+    "inputTokens": 1118,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 35328,
+    "cacheReadInputTokens": 38784,
     "contextWindow": 200000,
-    "contextTokens": 35381,
-    "percentage": 18,
+    "contextTokens": 39902,
+    "percentage": 20,
     "contextWindowIsAuthoritative": true
   }
 }
