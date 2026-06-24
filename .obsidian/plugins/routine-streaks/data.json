@@ -1,13 +1,4 @@
 {
-  "autoRecalculate": true,
-  "cache": {},
-  "dailyNoteDateFormat": "YYYY-MM-DD",
-  "dailyNoteFolder": "0-日记",
-  "dayStartHour": 5,
-  "expandedRoutineIds": [],
-  "expandedWidgetTaskRoutineIds": [],
-  "mainSyncDevice": "",
-  "overviewPet": "dog",
   "routines": [
     {
       "id": "routine-morning",
@@ -16,13 +7,17 @@
       "enabled": true,
       "schedule": {
         "type": "weekdays",
-        "weekdays": [1, 2, 3, 4, 5, 6, 0]
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       },
-      "templateItems": [
-        { "text": "早起喝水", "lineNumber": 0 },
-        { "text": "晨间冥想", "lineNumber": 1 },
-        { "text": "阅读 30 分钟", "lineNumber": 2 }
-      ],
+      "templateItems": [],
       "freezePeriods": []
     },
     {
@@ -32,20 +27,83 @@
       "enabled": true,
       "schedule": {
         "type": "weekdays",
-        "weekdays": [1, 2, 3, 4, 5, 6, 0]
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       },
-      "templateItems": [
-        { "text": "复盘今日", "lineNumber": 0 },
-        { "text": "规划明日", "lineNumber": 1 }
-      ],
+      "templateItems": [],
       "freezePeriods": []
     }
   ],
+  "cache": {
+    "routine-morning": {
+      "currentStreak": 0,
+      "longestStreak": 0,
+      "lastCompletedDate": "",
+      "lastComputedAt": "2026-06-24T16:31:07.829Z",
+      "completedDates": [],
+      "countedCompletionDates": [],
+      "todayTaskCount": 0,
+      "todayCompletedTaskCount": 0,
+      "todayIncompleteTaskCount": 0,
+      "todayStatus": "missing_daily_note",
+      "todayTasks": []
+    },
+    "routine-evening": {
+      "currentStreak": 0,
+      "longestStreak": 0,
+      "lastCompletedDate": "",
+      "lastComputedAt": "2026-06-24T16:31:07.829Z",
+      "completedDates": [],
+      "countedCompletionDates": [],
+      "todayTaskCount": 0,
+      "todayCompletedTaskCount": 0,
+      "todayIncompleteTaskCount": 0,
+      "todayStatus": "missing_daily_note",
+      "todayTasks": []
+    }
+  },
+  "dailyNoteFolder": "0-日记",
+  "dailyNoteDateFormat": "YYYY-MM-DD",
+  "mainSyncDevice": false,
   "scriptableExportPath": "Routine Streaks/data.json",
-  "scriptableRoutineId": "",
-  "scriptableTodayRoutineIds": [],
-  "scriptableWidgetFamily": "medium",
   "scriptableWidgetType": "dashboard",
+  "scriptableRoutineId": "routine-morning",
+  "scriptableWidgetFamily": "large",
+  "scriptableTodayRoutineIds": [
+    "routine-morning",
+    "routine-evening"
+  ],
   "weekStartDay": 1,
-  "widgetLayout": {}
+  "dayStartHour": 5,
+  "overviewPet": "dog",
+  "autoRecalculate": true,
+  "expandedRoutineIds": [],
+  "expandedWidgetTaskRoutineIds": [],
+  "widgetLayout": [
+    {
+      "id": "widget_1782318667823_s04kyz",
+      "type": "overview",
+      "title": "",
+      "routineId": ""
+    },
+    {
+      "id": "widget_1782318667823_5epybb",
+      "type": "routine_cards",
+      "title": "",
+      "routineId": ""
+    },
+    {
+      "id": "widget_1782318667823_q7yzp9",
+      "type": "today_items",
+      "title": "",
+      "routineId": ""
+    }
+  ]
 }
