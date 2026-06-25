@@ -4,8 +4,8 @@
   "title": "Analyze provided content",
   "titleGenerationStatus": "success",
   "createdAt": 1782377657489,
-  "updatedAt": 1782383218407,
-  "lastResponseAt": 1782383218407,
+  "updatedAt": 1782383908809,
+  "lastResponseAt": 1782383908809,
   "sessionId": "ecb57d68-969a-4c89-82fd-dffc8a6b87f8",
   "providerState": {
     "providerSessionId": "ecb57d68-969a-4c89-82fd-dffc8a6b87f8",
@@ -586,11 +586,11 @@
   },
   "usage": {
     "model": "opus",
-    "inputTokens": 924,
+    "inputTokens": 4735,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 68352,
+    "cacheReadInputTokens": 82304,
     "contextWindow": 200000,
-    "contextTokens": 69276,
-    "percentage": 35
+    "contextTokens": 87039,
+    "percentage": 44
   }
 }
