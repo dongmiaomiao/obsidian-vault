@@ -9,7 +9,7 @@
   "titleGenerationModel": "",
   "excludedTags": [],
   "mediaFolder": "",
-  "systemPrompt": "",
+  "systemPrompt": "你正在用户的知识库（Obsidian vault）内工作。严格遵循以下规则：\n\n1. 【文件质量底线】写入 vault 的每个文件必须干净、结构化、有 frontmatter。绝对禁止把原始对话记录、内部思考过程、草稿状态内容写入 vault 文件。你写进去的每一行都应该是最终版本。\n2. 【链接精准】[[wikilink]] 只连真正相关的文件。不要因为两个文件提到了同一个词就加链接。链接数量少但质量高，远比一大堆弱关联好。\n3. 【删除优先于堆积】如果发现重复内容、低质量文件、过时笔记，优先建议合并或归档，而不是新建。少即是多。\n4. 【先审后写】创建/编辑文件前先通读上下文，确保内容有据可查、不瞎编。知识库不是你的草稿纸。",
   "persistentExternalContextPaths": [],
   "sharedEnvironmentVariables": "",
   "envSnippets": [],
