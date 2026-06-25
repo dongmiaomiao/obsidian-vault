@@ -4,8 +4,8 @@
   "title": "Analyze provided content",
   "titleGenerationStatus": "success",
   "createdAt": 1782377657489,
-  "updatedAt": 1782380308366,
-  "lastResponseAt": 1782380308366,
+  "updatedAt": 1782380886790,
+  "lastResponseAt": 1782380886790,
   "sessionId": "ecb57d68-969a-4c89-82fd-dffc8a6b87f8",
   "providerState": {
     "providerSessionId": "ecb57d68-969a-4c89-82fd-dffc8a6b87f8"
@@ -13,11 +13,11 @@
   "currentNote": "未命名.md",
   "usage": {
     "model": "opus",
-    "inputTokens": 172,
+    "inputTokens": 115,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 129536,
+    "cacheReadInputTokens": 144384,
     "contextWindow": 200000,
-    "contextTokens": 129708,
-    "percentage": 65
+    "contextTokens": 144499,
+    "percentage": 72
   }
 }
