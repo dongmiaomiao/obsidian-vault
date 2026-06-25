@@ -4,8 +4,8 @@
   "title": "Analyze provided content",
   "titleGenerationStatus": "success",
   "createdAt": 1782377657489,
-  "updatedAt": 1782382198396,
-  "lastResponseAt": 1782382198396,
+  "updatedAt": 1782382835804,
+  "lastResponseAt": 1782382835804,
   "sessionId": "ecb57d68-969a-4c89-82fd-dffc8a6b87f8",
   "providerState": {
     "providerSessionId": "ecb57d68-969a-4c89-82fd-dffc8a6b87f8",
@@ -584,14 +584,13 @@
       }
     }
   },
-  "currentNote": "Claude Code + Obsidian.md",
   "usage": {
     "model": "opus",
-    "inputTokens": 8146,
+    "inputTokens": 714,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 159872,
+    "cacheReadInputTokens": 53504,
     "contextWindow": 200000,
-    "contextTokens": 168018,
-    "percentage": 84
+    "contextTokens": 54218,
+    "percentage": 27
   }
 }

@@ -1,6 +1,7 @@
 ---
 tags: [AI, 工具, Claudian, 使用指南]
 alias: [Claudian指南, AI助手用法, 怎么用Claudian]
+status: final
 ---
 
 # Claudian 使用指南
