@@ -4,21 +4,20 @@
   "title": "Analyze provided content",
   "titleGenerationStatus": "success",
   "createdAt": 1782377657489,
-  "updatedAt": 1782378553796,
-  "lastResponseAt": 1782378553796,
+  "updatedAt": 1782379170306,
+  "lastResponseAt": 1782379170306,
   "sessionId": "ecb57d68-969a-4c89-82fd-dffc8a6b87f8",
   "providerState": {
     "providerSessionId": "ecb57d68-969a-4c89-82fd-dffc8a6b87f8"
   },
   "currentNote": "未命名.md",
   "usage": {
-    "model": "haiku",
-    "inputTokens": 188,
+    "model": "opus",
+    "inputTokens": 3630,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 59392,
+    "cacheReadInputTokens": 92672,
     "contextWindow": 200000,
-    "contextTokens": 59580,
-    "percentage": 30,
-    "contextWindowIsAuthoritative": true
+    "contextTokens": 96302,
+    "percentage": 48
   }
 }
