@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026-06-24.md",
+                "file": "10-知识管理/Claudian 使用指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-24"
+              "title": "Claudian 使用指南"
             }
           }
         ],
@@ -169,7 +169,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "我的回忆录.md",
+            "file": "10-知识管理/Claudian 使用指南.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -214,8 +214,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "oz-clear-unused-images:Clear Unused Images": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -228,6 +226,8 @@
   },
   "active": "763e1d0ee2826ff2",
   "lastOpenFiles": [
+    "30-项目管理/项目管理资料库/智慧城市信息资源交换平台解决方案(4).md",
+    "_TODO/2026-06-25 TODO.md",
     "未命名.md",
     "2026-06-24.md",
     "未命名",
