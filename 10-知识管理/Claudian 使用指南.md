@@ -121,5 +121,5 @@ alias: [Claudian指南, AI助手用法, 怎么用Claudian]
 ## 📎 关联
 
 - [[10-知识管理/数据治理_全库索引]] — 数据治理知识库地图
-- [[未命名]] — 知识加工 SOP 和投料模板
+- [[Claude Code + Obsidian]] — 知识加工 SOP 和投料模板
 - [[Claude code命令大全]] — 终端工具 CC 用法（和我是互补关系）
