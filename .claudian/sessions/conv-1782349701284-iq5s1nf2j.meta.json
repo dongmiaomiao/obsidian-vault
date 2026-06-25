@@ -4,6 +4,21 @@
   "title": "Compile Chinalco interview document from projec...",
   "titleGenerationStatus": "success",
   "createdAt": 1782349701284,
-  "updatedAt": 1782349706461,
-  "sessionId": null
+  "updatedAt": 1782349785488,
+  "lastResponseAt": 1782349785488,
+  "sessionId": "41685318-09b8-4683-ad9c-7567c8e2cec9",
+  "providerState": {
+    "providerSessionId": "41685318-09b8-4683-ad9c-7567c8e2cec9"
+  },
+  "currentNote": "30-项目管理/中铝数据治理 PMO 面试 — 完整作战手册.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 39,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 74112,
+    "contextWindow": 200000,
+    "contextTokens": 74151,
+    "percentage": 37,
+    "contextWindowIsAuthoritative": true
+  }
 }
