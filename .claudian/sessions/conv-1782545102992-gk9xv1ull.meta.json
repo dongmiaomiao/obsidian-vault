@@ -4,6 +4,20 @@
   "title": "Improve Chinese phrasing",
   "titleGenerationStatus": "success",
   "createdAt": 1782545102993,
-  "updatedAt": 1782545109851,
-  "sessionId": null
+  "updatedAt": 1782545156081,
+  "lastResponseAt": 1782545156081,
+  "sessionId": "a7f0e594-fdf5-40a4-8bda-f4831c824516",
+  "providerState": {
+    "providerSessionId": "a7f0e594-fdf5-40a4-8bda-f4831c824516"
+  },
+  "currentNote": "10-知识管理/Claudian 使用指南.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 2765,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 27136,
+    "contextWindow": 200000,
+    "contextTokens": 29901,
+    "percentage": 15
+  }
 }
