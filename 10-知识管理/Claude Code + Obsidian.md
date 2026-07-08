@@ -1,6 +1,13 @@
 ---
-tags: [AI, Claude Code, Obsidian, SOP, 工具]
-alias: [CC工作流, 知识加工SOP, CC模板套件]
+tags:
+  - AI
+  - Obsidian
+  - SOP
+  - 工具
+alias:
+  - CC工作流
+  - 知识加工SOP
+  - CC模板套件
 status: reviewed
 ---
 
