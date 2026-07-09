@@ -4,19 +4,19 @@
   "title": "Organize Feynman Learning Method folder",
   "titleGenerationStatus": "success",
   "createdAt": 1783607841128,
-  "updatedAt": 1783608687890,
-  "lastResponseAt": 1783608687890,
+  "updatedAt": 1783611103210,
+  "lastResponseAt": 1783611103210,
   "sessionId": "232ee926-3ff4-42e4-9213-5695eab5ce57",
   "providerState": {
     "providerSessionId": "232ee926-3ff4-42e4-9213-5695eab5ce57"
   },
   "usage": {
     "model": "opus",
-    "inputTokens": 91,
+    "inputTokens": 778,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 47744,
+    "cacheReadInputTokens": 47872,
     "contextWindow": 200000,
-    "contextTokens": 47835,
+    "contextTokens": 48650,
     "percentage": 24
   }
 }
