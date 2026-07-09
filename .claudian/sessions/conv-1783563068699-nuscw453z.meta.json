@@ -4,13 +4,12 @@
   "title": "整理提供的内容",
   "titleGenerationStatus": "success",
   "createdAt": 1783563068699,
-  "updatedAt": 1783563166897,
+  "updatedAt": 1783607803322,
   "lastResponseAt": 1783563166897,
   "sessionId": "db55063f-bdd7-4291-833b-c41cba77ba0a",
   "providerState": {
     "providerSessionId": "db55063f-bdd7-4291-833b-c41cba77ba0a"
   },
-  "currentNote": "10-知识管理/读书笔记/费曼学习法/费曼学习法.md",
   "usage": {
     "model": "opus",
     "inputTokens": 178,
