@@ -4,13 +4,12 @@
   "title": "Organize resonant interview excerpt",
   "titleGenerationStatus": "success",
   "createdAt": 1783736958487,
-  "updatedAt": 1783737066481,
+  "updatedAt": 1783740738120,
   "lastResponseAt": 1783737066481,
   "sessionId": "de47412b-5f51-4c6b-9ccd-066ce932a399",
   "providerState": {
     "providerSessionId": "de47412b-5f51-4c6b-9ccd-066ce932a399"
   },
-  "currentNote": "脆弱是个可贵的品质，但那个过程没人心疼.md",
   "usage": {
     "model": "opus",
     "inputTokens": 173,

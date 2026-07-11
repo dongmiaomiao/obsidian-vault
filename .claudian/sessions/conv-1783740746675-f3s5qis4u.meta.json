@@ -1,0 +1,23 @@
+{
+  "id": "conv-1783740746675-f3s5qis4u",
+  "providerId": "claude",
+  "title": "整理内容",
+  "titleGenerationStatus": "success",
+  "createdAt": 1783740746675,
+  "updatedAt": 1783740803719,
+  "lastResponseAt": 1783740803719,
+  "sessionId": "82e5deb0-125c-49aa-93de-0d7fb003c415",
+  "providerState": {
+    "providerSessionId": "82e5deb0-125c-49aa-93de-0d7fb003c415"
+  },
+  "currentNote": "不再向身边人倾诉自己的情绪.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 154,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 27008,
+    "contextWindow": 200000,
+    "contextTokens": 27162,
+    "percentage": 14
+  }
+}
