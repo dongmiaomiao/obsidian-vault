@@ -4,13 +4,12 @@
   "title": "Organize text content",
   "titleGenerationStatus": "success",
   "createdAt": 1783748522975,
-  "updatedAt": 1783748562204,
+  "updatedAt": 1783749272050,
   "lastResponseAt": 1783748562204,
   "sessionId": "b1afa62d-fb58-4fe8-843b-e64fb86c8b9f",
   "providerState": {
     "providerSessionId": "b1afa62d-fb58-4fe8-843b-e64fb86c8b9f"
   },
-  "currentNote": "00-收件箱/灵感记录/脆弱是个可贵的品质，但那个过程没人心疼.md",
   "usage": {
     "model": "opus",
     "inputTokens": 486,
