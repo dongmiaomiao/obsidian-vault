@@ -3,15 +3,16 @@
     "openTabs": [
       {
         "tabId": "tab-1781424745442-s06twrz",
-        "conversationId": "conv-1783743384705-c8ijrsdot"
+        "conversationId": "conv-1783748522975-po16ii4ht"
       },
       {
         "tabId": "tab-1782343674941-0uuleq5",
         "conversationId": "conv-1782344047291-g1pr9zcbq"
       },
       {
+        "draftModel": "opus",
         "tabId": "tab-1782349565610-zv5iccp",
-        "conversationId": "conv-1783740746675-f3s5qis4u"
+        "conversationId": null
       }
     ],
     "activeTabId": "tab-1781424745442-s06twrz"
