@@ -1,7 +1,7 @@
 ---
 title: "第 22 章：Skills 基础"
 type: chapter
-part: "第五篇：上下文、Token 和成本控制"
+part: "第六篇：扩展系统 - Skills、Commands、SubAgents、Hooks、MCP、Plugins"
 source: "Claude Code 学习手册"
 aliases:
 ---
@@ -18,9 +18,7 @@ aliases:
 
 让读者掌握 Skill 的用途和最小结构，把重复知识和流程封装成可复用能力。
 
-本章从一个最小 SKILL.md 开始，解释 Skill 的触发依赖描述，而不是靠用户每次手动复制长提示。随后加
-
-入引用资料和模板，展示渐进式披露如何节省 token。
+本章从一个最小 SKILL.md 开始，解释 Skill 的触发依赖描述，而不是靠用户每次手动复制长提示。随后加入引用资料和模板，展示渐进式披露如何节省 token。
 
 学习目标
 
@@ -36,9 +34,7 @@ aliases:
 
 先做一个小案例
 
-本章先使用 Python 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 Python 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -64,23 +60,15 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-目录
-
 • 22.1 Skill 解决什么问题
 
-• 22.1.1 重复任务Claude Code 学习手册
+• 22.1.1 重复任务
 
 • 22.1.2 专业知识
 
@@ -124,9 +112,7 @@ print(summarize_target("README.md"))
 
 核心概念
 
-Skill 解决什么问题 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+Skill 解决什么问题 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -136,9 +122,7 @@ Skill 解决什么问题 的重点不是记住术语，而是把它放回真实�
 
 • 22.1.3 团队标准：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -146,7 +130,7 @@ Skill 解决什么问题 的重点不是记住术语，而是把它放回真实�
 
 2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
-3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。Claude Code 学习手册
+3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
 4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。
 
@@ -178,21 +162,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -224,11 +200,9 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 能说明本节三个重点：名称和描述、使用步骤、资源文件引用。
 
-核心概念Claude Code 学习手册
+核心概念
 
-SKILL.md 结构 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+SKILL.md 结构 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -238,9 +212,7 @@ SKILL.md 结构 的重点不是记住术语，而是把它放回真实工程动�
 
 • 22.2.3 资源文件引用：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -280,21 +252,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -306,7 +270,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 检查清单
 
-• [ ] 我能用自己的话解释 SKILL.md 结构 解决什么问题。Claude Code 学习手册
+• [ ] 我能用自己的话解释 SKILL.md 结构 解决什么问题。
 
 • [ ] 我能写出一个不会让 Claude Code 误解的任务说明。
 
@@ -328,9 +292,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-渐进式披露 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+渐进式披露 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -340,9 +302,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 22.3.3 模板放入 templates/：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -382,21 +342,15 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),Claude Code 学习手册
+"path": str(target),
 
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -430,9 +384,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-Skill 案例 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+Skill 案例 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -442,9 +394,7 @@ Skill 案例 的重点不是记住术语，而是把它放回真实工程动作�
 
 • 22.4.3 团队规范 Skill：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -452,7 +402,7 @@ Skill 案例 的重点不是记住术语，而是把它放回真实工程动作�
 
 2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
-3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。Claude Code 学习手册
+3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
 4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。
 
@@ -484,21 +434,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -526,35 +468,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中
-
-本章案例与练习Claude Code 学习手册
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中本章案例与练习
 
 • 案例：创建 code-reviewing/SKILL.md。
 
@@ -586,13 +500,9 @@ Claude Code
 
 本章小结
 
-本章围绕“Skills 基础”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code
+本章围绕“Skills 基础”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“自定义命令与任务型 Skill”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“自定义命令与任务型 Skill”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
@@ -600,7 +510,5 @@ Claude Code
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-202Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

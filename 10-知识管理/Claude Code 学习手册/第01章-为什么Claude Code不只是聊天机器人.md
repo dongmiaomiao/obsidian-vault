@@ -16,17 +16,9 @@ aliases:
 
 本章导读
 
-帮助读者建立第一个正确心智模型：Claude Code
+帮助读者建立第一个正确心智模型：Claude Code 是能读取项目、调用工具、修改文件、运行命令并受权限约束的 AI 编码Agent，不是只回答问题的聊天窗口。
 
-是能读取项目、调用工具、修改文件、运行命令并受权限约束的 AI 编码
-
-Agent，不是只回答问题的聊天窗口。
-
-本章先用一个简单函数分析任务展示聊天模型和 Claude Code 的区别，再解释 Claude Code 的核心闭环
-
-：理解目标、探索项目、使用工具、修改文件、验证结果、总结交付。重点强调“上下文不是魔法”“权限不
-
-是麻烦”“验证不是可选项”。读者应明白，后续所有高级功能都建立在这个闭环之上。
+本章先用一个简单函数分析任务展示聊天模型和 Claude Code 的区别，再解释 Claude Code 的核心闭环：理解目标、探索项目、使用工具、修改文件、验证结果、总结交付。重点强调“上下文不是魔法”“权限不是麻烦”“验证不是可选项”。读者应明白，后续所有高级功能都建立在这个闭环之上。
 
 学习目标
 
@@ -42,9 +34,7 @@ Agent，不是只回答问题的聊天窗口。
 
 先做一个小案例
 
-本章先使用 Python 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 Python 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -70,19 +60,11 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
-
-目录Claude Code 学习手册
 
 • 1.1 AI Chat、AI Agent、AI 编码 Agent 的区别
 
@@ -132,11 +114,7 @@ print(summarize_target("README.md"))
 
 核心概念
 
-AI Chat、AI Agent、AI 编码 Agent 的区别
-
-的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+AI Chat、AI Agent、AI 编码 Agent 的区别的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -148,9 +126,7 @@ AI Chat、AI Agent、AI 编码 Agent 的区别
 
 为什么需要文件系统、命令行和权限：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。Claude Code 学习手册
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -190,21 +166,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -230,7 +198,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 学习目标
 
-• 理解 Claude Code 的核心工作方式 在本章主题中的具体作用。Claude Code 学习手册
+• 理解 Claude Code 的核心工作方式 在本章主题中的具体作用。
 
 • 能把 Claude Code 的核心工作方式 转化为一个可执行、可验证的 Claude Code 任务。
 
@@ -242,9 +210,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-Claude Code 的核心工作方式 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude
-
-Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+Claude Code 的核心工作方式 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -254,9 +220,7 @@ Code 来说，一个好的任务必须同时说明目标、边界、可用资料
 
 • 1.2.3 工具结果如何反过来影响下一步决策：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -296,23 +260,15 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
-
-练习Claude Code 学习手册
+练习
 
 • 练习 1：把 Claude Code 的核心工作方式 改写成一个包含目标、范围、限制、输出格式的提示词。
 
@@ -346,9 +302,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-新手最容易误解的地方 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+新手最容易误解的地方 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -358,9 +312,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 1.3.3 以为 AI 修改代码不需要验证：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -384,7 +336,7 @@ claude "只围绕“新手最容易误解的地方”做一次可验证的小任
 
 cd ~/claude-code-handbook/book/examples/chapter-01
 
-claude "只围绕“新手最容易误解的地方”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"Claude Code 学习手册
+claude "只围绕“新手最容易误解的地方”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"
 
 示例
 
@@ -400,21 +352,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -450,9 +394,7 @@ Markdown 和规则文件。
 
 核心概念
 
-本书的学习方法 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+本书的学习方法 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -460,11 +402,9 @@ Markdown 和规则文件。
 
 • 1.4.2 用检查清单判断是否真正掌握：先解释它解决的问题，再给出一个可观察的操作。
 
-• 1.4.3 把成功经验写回 Markdown 和规则文件：先解释它解决的问题，再给出一个可观察的操作。Claude Code 学习手册
+• 1.4.3 把成功经验写回 Markdown 和规则文件：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -504,21 +444,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -538,7 +470,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • [ ] 我能判断 Claude Code 的回答是否基于真实证据。
 
-常见坑与排查Claude Code 学习手册
+常见坑与排查
 
 常见问题
 
@@ -546,35 +478,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中
-
-本章案例与练习
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中本章案例与练习
 
 • 案例：同一个 Bug 让普通聊天模型和 Claude Code 分别分析，比较输出差异。
 
@@ -606,15 +510,9 @@ Claude Code
 
 本章小结
 
-本章围绕“为什么 Claude Code
+本章围绕“为什么 Claude Code 不只是聊天机器人”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-不只是聊天机器人”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code
-
-在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“环境、账号、模型和第一个任务”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“环境、账号、模型和第一个任务”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
@@ -622,7 +520,5 @@ Claude Code
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-13Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

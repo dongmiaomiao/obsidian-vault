@@ -18,9 +18,7 @@ aliases:
 
 把个人和团队的 Claude Code 使用经验整理成正式规范。
 
-本章是安全篇的小结。读者要把分散的规则、模板、权限、Hook、PR
-
-检查和复盘机制整理成一份生产级使用规范，并用成熟度模型评估自己当前阶段。
+本章是安全篇的小结。读者要把分散的规则、模板、权限、Hook、PR 检查和复盘机制整理成一份生产级使用规范，并用成熟度模型评估自己当前阶段。
 
 学习目标
 
@@ -36,9 +34,7 @@ aliases:
 
 先做一个小案例
 
-本章先使用 Python 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 Python 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -64,23 +60,15 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-目录
-
 • 40.1 个人规范
 
-• 40.1.1 任务前检查Claude Code 学习手册
+• 40.1.1 任务前检查
 
 • 40.1.2 修改中审查
 
@@ -126,9 +114,7 @@ print(summarize_target("README.md"))
 
 核心概念
 
-个人规范 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+个人规范 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -138,15 +124,13 @@ print(summarize_target("README.md"))
 
 • 40.1.3 完成后验证：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
 1. 明确当前任务只覆盖本节范围，不把后续章节内容提前展开。
 
-2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。Claude Code 学习手册
+2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
 3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
@@ -180,21 +164,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -226,11 +202,9 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 能说明本节三个重点：统一规则文件、统一 PR 模板、统一安全边界。
 
-核心概念Claude Code 学习手册
+核心概念
 
-团队规范 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+团队规范 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -240,9 +214,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 40.2.3 统一安全边界：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -282,21 +254,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -308,7 +272,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 检查清单
 
-• [ ] 我能用自己的话解释 团队规范 解决什么问题。Claude Code 学习手册
+• [ ] 我能用自己的话解释 团队规范 解决什么问题。
 
 • [ ] 我能写出一个不会让 Claude Code 误解的任务说明。
 
@@ -330,9 +294,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-审计与可观测性 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+审计与可观测性 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -342,9 +304,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 40.3.3 变更记录：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
@@ -384,21 +344,15 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),Claude Code 学习手册
+"path": str(target),
 
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -432,9 +386,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-成熟度模型 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+成熟度模型 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -446,15 +398,13 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 40.4.4 工程化：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 Python。用一个小型 Python CLI
-
-或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
+本节主案例语言是 Python。用一个小型 Python CLI 或脚本项目作为观察对象，重点展示文件读取、测试和自动化流程。
 
 操作步骤
 
 1. 明确当前任务只覆盖本节范围，不把后续章节内容提前展开。
 
-2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。Claude Code 学习手册
+2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
 3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
@@ -488,21 +438,13 @@ target = PROJECT_ROOT / path
 
 return {
 
-"path": str(target),
-
-"exists": target.exists(),
-
-"suffix": target.suffix,
-
-}
+"path": str(target),"exists": target.exists(),"suffix": target.suffix,}
 
 if __name__ == "__main__":
 
 print(summarize_target("README.md"))
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -530,33 +472,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中Claude Code 学习手册
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中
 
 本章案例与练习
 
@@ -590,15 +506,9 @@ Claude Code
 
 本章小结
 
-本章围绕“生产级 Claude Code
+本章围绕“生产级 Claude Code 使用规范”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-使用规范”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code
-
-在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“Claude Code 内部工作机制导览”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“Claude Code 内部工作机制导览”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
@@ -606,7 +516,5 @@ Claude Code
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-364Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

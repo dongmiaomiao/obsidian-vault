@@ -1,14 +1,12 @@
 ---
-title: "# Windows PowerShell"
+title: "附录 A：Claude Code 常用命令速查本附录用于快速查找日常使用命令。具体命令可能随 Claude Code 版本变化，执行前应以官方文档和本机"
 type: appendix
-part: "第十篇：完整实战案例"
+part: "附录"
 source: "Claude Code 学习手册"
 aliases:
 ---
 
-附录 A：Claude Code 常用命令速查
-
-本附录用于快速查找日常使用命令。具体命令可能随 Claude Code 版本变化，执行前应以官方文档和本机
+附录 A：Claude Code 常用命令速查本附录用于快速查找日常使用命令。具体命令可能随 Claude Code 版本变化，执行前应以官方文档和本机
 
 claude --help 为准。
 
@@ -24,9 +22,7 @@ claude
 
 cd ~/your-project
 
-claude
-
-常用检查
+claude 常用检查
 
 # Windows PowerShell
 
@@ -48,7 +44,5 @@ claude --version
 
 • 高风险命令执行前要求它解释影响。
 
-• 所有修复都要求给出验证命令。Claude Code 学习手册
-
-412Claude Code 学习手册
+• 所有修复都要求给出验证命令。
 

@@ -18,9 +18,7 @@ aliases:
 
 让读者学会用 Hook 在工具调用前后加入安全和质量控制。
 
-本章将 Hook 定位为“工程护栏”。安全 Hook 防止危险操作，质量 Hook 提醒格式化和测试，Stop Hook
-
-防止任务没有验证就结束。读者要理解 Hook 不应该过度复杂，否则会干扰正常开发。
+本章将 Hook 定位为“工程护栏”。安全 Hook 防止危险操作，质量 Hook 提醒格式化和测试，Stop Hook 防止任务没有验证就结束。读者要理解 Hook 不应该过度复杂，否则会干扰正常开发。
 
 学习目标
 
@@ -36,9 +34,7 @@ aliases:
 
 先做一个小案例
 
-本章先使用 C# 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 C# 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -52,39 +48,23 @@ cd ~/claude-code-handbook/book/examples/chapter-26
 
 claude "基于本章主题“Hooks 事件驱动自动化”，设计一个最小可执行案例，并给出验证清单。"
 
-案例中的最小代码对象如下：
-
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+案例中的最小代码对象如下：using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
-
-}
+Directory.Exists(fullPath)}");}
 
 }
 
 ProjectInspector.Summarize("README.md");
 
-目录
-
 • 26.1 Hook 是什么
 
-• 26.1.1 工具调用前Claude Code 学习手册
+• 26.1.1 工具调用前
 
 • 26.1.2 工具调用后
 
@@ -128,9 +108,7 @@ ProjectInspector.Summarize("README.md");
 
 核心概念
 
-Hook 是什么 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+Hook 是什么 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -140,9 +118,7 @@ Hook 是什么 的重点不是记住术语，而是把它放回真实工程动�
 
 • 26.1.3 任务结束前：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 C#。用一个 C# 控制台或 Web API
-
-项目作为观察对象，重点展示项目结构、构建命令和类型约束。
+本节主案例语言是 C#。用一个 C# 控制台或 Web API 项目作为观察对象，重点展示项目结构、构建命令和类型约束。
 
 操作步骤
 
@@ -150,7 +126,7 @@ Hook 是什么 的重点不是记住术语，而是把它放回真实工程动�
 
 2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
-3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。Claude Code 学习手册
+3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
 4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。
 
@@ -172,35 +148,19 @@ claude "只围绕“Hook 是什么”做一次可验证的小任务：先说明�
 
 下面的示例不是为了展示复杂代码，而是为了给 Claude Code 一个可以读取、运行或解释的最小对象。
 
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
+Directory.Exists(fullPath)}");}
 
 }
 
-}
-
-ProjectInspector.Summarize("README.md");
-
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+ProjectInspector.Summarize("README.md");可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -232,11 +192,9 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 能说明本节三个重点：阻止危险删除、阻止读取密钥、阻止越权命令。
 
-核心概念Claude Code 学习手册
+核心概念
 
-安全 Hook 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+安全 Hook 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -246,9 +204,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 26.2.3 阻止越权命令：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 C#。用一个 C# 控制台或 Web API
-
-项目作为观察对象，重点展示项目结构、构建命令和类型约束。
+本节主案例语言是 C#。用一个 C# 控制台或 Web API 项目作为观察对象，重点展示项目结构、构建命令和类型约束。
 
 操作步骤
 
@@ -278,35 +234,19 @@ claude "只围绕“安全 Hook”做一次可验证的小任务：先说明计�
 
 下面的示例不是为了展示复杂代码，而是为了给 Claude Code 一个可以读取、运行或解释的最小对象。
 
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
+Directory.Exists(fullPath)}");}
 
 }
 
-}
-
-ProjectInspector.Summarize("README.md");
-
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+ProjectInspector.Summarize("README.md");可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -316,7 +256,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 练习 3：让 Claude Code 给出验证命令，并记录验证结果。
 
-检查清单Claude Code 学习手册
+检查清单
 
 • [ ] 我能用自己的话解释 安全 Hook 解决什么问题。
 
@@ -340,9 +280,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-质量 Hook 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+质量 Hook 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -352,9 +290,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 26.3.3 自动测试：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 C#。用一个 C# 控制台或 Web API
-
-项目作为观察对象，重点展示项目结构、构建命令和类型约束。
+本节主案例语言是 C#。用一个 C# 控制台或 Web API 项目作为观察对象，重点展示项目结构、构建命令和类型约束。
 
 操作步骤
 
@@ -384,35 +320,19 @@ claude "只围绕“质量 Hook”做一次可验证的小任务：先说明计�
 
 下面的示例不是为了展示复杂代码，而是为了给 Claude Code 一个可以读取、运行或解释的最小对象。
 
-using System;
+using System;using System.IO;public static class ProjectInspector{
 
-using System.IO;
-
-public static class ProjectInspector
+public static void Summarize(string path)
 
 {
 
-public static void Summarize(string path)Claude Code 学习手册
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-{
-
-var fullPath = Path.GetFullPath(path);
-
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
+Directory.Exists(fullPath)}");}
 
 }
 
-}
-
-ProjectInspector.Summarize("README.md");
-
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+ProjectInspector.Summarize("README.md");可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -446,9 +366,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-Stop Hook 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+Stop Hook 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -458,15 +376,13 @@ Stop Hook 的重点不是记住术语，而是把它放回真实工程动作里�
 
 • 26.4.3 输出最终报告：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 C#。用一个 C# 控制台或 Web API
-
-项目作为观察对象，重点展示项目结构、构建命令和类型约束。
+本节主案例语言是 C#。用一个 C# 控制台或 Web API 项目作为观察对象，重点展示项目结构、构建命令和类型约束。
 
 操作步骤
 
 1. 明确当前任务只覆盖本节范围，不把后续章节内容提前展开。
 
-2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。Claude Code 学习手册
+2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
 3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
@@ -490,35 +406,19 @@ claude "只围绕“Stop Hook”做一次可验证的小任务：先说明计划
 
 下面的示例不是为了展示复杂代码，而是为了给 Claude Code 一个可以读取、运行或解释的最小对象。
 
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
+Directory.Exists(fullPath)}");}
 
 }
 
-}
-
-ProjectInspector.Summarize("README.md");
-
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+ProjectInspector.Summarize("README.md");可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -546,33 +446,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中Claude Code 学习手册
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中
 
 本章案例与练习
 
@@ -606,13 +480,9 @@ Claude Code
 
 本章小结
 
-本章围绕“Hooks 事件驱动自动化”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让
+本章围绕“Hooks 事件驱动自动化”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“MCP 基础与外部工具连接”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“MCP 基础与外部工具连接”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
@@ -620,7 +490,5 @@ Claude Code 在明确边界内完成任务，并通过证据、测试或检查�
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-238Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

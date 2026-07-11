@@ -16,15 +16,9 @@ aliases:
 
 本章导读
 
-让读者理解 Claude Code
+让读者理解 Claude Code 为什么能处理工程任务：它不是只靠模型记忆，而是通过工具读取、搜索、编辑和执行命令。
 
-为什么能处理工程任务：它不是只靠模型记忆，而是通过工具读取、搜索、编辑和执行命令。
-
-本章以一次“小 Bug 修复”为主线，拆解 Claude Code 可能使用的工具链：搜索相关代码、读取关键文件、
-
-提出修改计划、应用补丁、运行测试、总结结果。重点讲“工具选择”而不是“工具百科”，让读者理解什么
-
-时候该让它搜索、什么时候该让它读取、什么时候必须运行命令验证。
+本章以一次“小 Bug 修复”为主线，拆解 Claude Code 可能使用的工具链：搜索相关代码、读取关键文件、提出修改计划、应用补丁、运行测试、总结结果。重点讲“工具选择”而不是“工具百科”，让读者理解什么时候该让它搜索、什么时候该让它读取、什么时候必须运行命令验证。
 
 学习目标
 
@@ -40,9 +34,7 @@ aliases:
 
 先做一个小案例
 
-本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -64,13 +56,9 @@ claude "基于本章主题“Claude Code 的文件读写和工具系统”，设
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -78,11 +66,9 @@ return 0;
 
 }
 
-目录
-
 • 3.1 文件读取工具
 
-• 3.1.1 读取单个文件与搜索文件的区别Claude Code 学习手册
+• 3.1.1 读取单个文件与搜索文件的区别
 
 • 3.1.2 先搜索再阅读的效率优势
 
@@ -128,9 +114,7 @@ Code 给出读取证据。
 
 核心概念
 
-文件读取工具 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+文件读取工具 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -148,7 +132,7 @@ Code 给出读取证据。
 
 1. 明确当前任务只覆盖本节范围，不把后续章节内容提前展开。
 
-2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。Claude Code 学习手册
+2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
 3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
@@ -178,13 +162,9 @@ claude "只围绕“文件读取工具”做一次可验证的小任务：先说
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -192,9 +172,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -226,11 +204,9 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 能说明本节三个重点：小范围修改与大范围重写、修改前说明计划、修改后查看 diff。
 
-核心概念Claude Code 学习手册
+核心概念
 
-编辑工具 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+编辑工具 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -278,13 +254,9 @@ claude "只围绕“编辑工具”做一次可验证的小任务：先说明计
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -292,9 +264,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -308,7 +278,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • [ ] 我能用自己的话解释 编辑工具 解决什么问题。
 
-• [ ] 我能写出一个不会让 Claude Code 误解的任务说明。Claude Code 学习手册
+• [ ] 我能写出一个不会让 Claude Code 误解的任务说明。
 
 • [ ] 我能指出本节任务的输入、输出、风险和验证方式。
 
@@ -330,9 +300,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-Shell 命令工具 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+Shell 命令工具 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -380,23 +348,17 @@ claude "只围绕“Shell 命令工具”做一次可验证的小任务：先说
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
-
-";Claude Code 学习手册
 
 return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -432,9 +394,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-Todo 与任务跟踪 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+Todo 与任务跟踪 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -456,7 +416,7 @@ Todo 与任务跟踪 的重点不是记住术语，而是把它放回真实工�
 
 3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
-4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。Claude Code 学习手册
+4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。
 
 5. 完成后用检查清单验证结果，而不是只看回答是否流畅。
 
@@ -482,13 +442,9 @@ claude "只围绕“Todo 与任务跟踪”做一次可验证的小任务：先�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -496,9 +452,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -526,39 +480,11 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中
-
-本章案例与练习
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中本章案例与练习
 
 • 案例：让 Claude Code 用搜索定位一个函数，不允许它全量阅读项目。
 
-• 练习：要求它在修改前列出计划和预计修改文件。Claude Code 学习手册
+• 练习：要求它在修改前列出计划和预计修改文件。
 
 • 练习：让它运行测试并解释失败输出。
 
@@ -586,15 +512,9 @@ Claude Code
 
 本章小结
 
-本章围绕“Claude Code
+本章围绕“Claude Code 的文件读写和工具系统”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-的文件读写和工具系统”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude
-
-Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“学习用项目准备”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“学习用项目准备”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
@@ -602,7 +522,5 @@ Code 在明确边界内完成任务，并通过证据、测试或检查清单验
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-31Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

@@ -1,7 +1,7 @@
 ---
 title: "第 15 章：Claude Code 提示词基本功"
 type: chapter
-part: "第三篇：Markdown、记忆和本地知识库"
+part: "第四篇：提示词、Opus 4.7 和模型驾驭"
 source: "Claude Code 学习手册"
 aliases:
 ---
@@ -18,9 +18,7 @@ aliases:
 
 建立 Claude Code 提示词的基本格式，让读者能稳定表达目标、范围、限制和输出要求。
 
-本章把“提示词”从灵感表达变成工程规格。读者要学会把“帮我改一下”改成“目标是什么、只允许改哪里、
-
-不能做什么、输出什么、如何验证”。本章不讲复杂技巧，重点训练稳定表达。
+本章把“提示词”从灵感表达变成工程规格。读者要学会把“帮我改一下”改成“目标是什么、只允许改哪里、不能做什么、输出什么、如何验证”。本章不讲复杂技巧，重点训练稳定表达。
 
 学习目标
 
@@ -36,9 +34,7 @@ aliases:
 
 先做一个小案例
 
-本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -60,13 +56,9 @@ claude "基于本章主题“Claude Code 提示词基本功”，设计一个最
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -74,13 +66,11 @@ return 0;
 
 }
 
-目录
-
 • 15.1 任务说明四要素
 
 • 15.1.1 目标
 
-• 15.1.2 范围Claude Code 学习手册
+• 15.1.2 范围
 
 • 15.1.3 限制
 
@@ -124,9 +114,7 @@ return 0;
 
 核心概念
 
-任务说明四要素 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+任务说明四要素 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -146,7 +134,7 @@ return 0;
 
 1. 明确当前任务只覆盖本节范围，不把后续章节内容提前展开。
 
-2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。Claude Code 学习手册
+2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
 3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
@@ -176,13 +164,9 @@ claude "只围绕“任务说明四要素”做一次可验证的小任务：先
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -190,9 +174,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -224,11 +206,9 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 能说明本节三个重点：什么算完成、什么不能做、如何验证完成。
 
-核心概念Claude Code 学习手册
+核心概念
 
-约束和验收标准 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+约束和验收标准 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -276,13 +256,9 @@ claude "只围绕“约束和验收标准”做一次可验证的小任务：先
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -290,9 +266,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -306,7 +280,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • [ ] 我能用自己的话解释 约束和验收标准 解决什么问题。
 
-• [ ] 我能写出一个不会让 Claude Code 误解的任务说明。Claude Code 学习手册
+• [ ] 我能写出一个不会让 Claude Code 误解的任务说明。
 
 • [ ] 我能指出本节任务的输入、输出、风险和验证方式。
 
@@ -326,9 +300,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-让模型先问问题 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+让模型先问问题 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -376,23 +348,17 @@ claude "只围绕“让模型先问问题”做一次可验证的小任务：先
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
-return 0;Claude Code 学习手册
+return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -426,9 +392,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-控制输出粒度 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+控制输出粒度 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -454,7 +418,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 5. 完成后用检查清单验证结果，而不是只看回答是否流畅。
 
-# Windows PowerShellClaude Code 学习手册
+# Windows PowerShell
 
 Set-Location "D:\AI\claude code学习手册\book\examples\chapter-15"
 
@@ -476,13 +440,9 @@ claude "只围绕“控制输出粒度”做一次可验证的小任务：先说
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -490,9 +450,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -520,35 +478,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中
-
-本章案例与练习
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中本章案例与练习
 
 • 案例：把 5 个模糊请求改成工程任务。
 
@@ -556,7 +486,7 @@ Claude Code
 
 • 练习：设计一个“信息不足时先提问”的提示词。
 
-练习答案不要求唯一，但必须满足三个条件：任务边界清楚、输出可验证、结果能沉淀。Claude Code 学习手册
+练习答案不要求唯一，但必须满足三个条件：任务边界清楚、输出可验证、结果能沉淀。
 
 本章交付物
 
@@ -580,15 +510,9 @@ Claude Code
 
 本章小结
 
-本章围绕“Claude Code
+本章围绕“Claude Code 提示词基本功”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-提示词基本功”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code
-
-在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“计划模式与探索模式”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“计划模式与探索模式”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
@@ -596,7 +520,5 @@ Claude Code
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-139Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

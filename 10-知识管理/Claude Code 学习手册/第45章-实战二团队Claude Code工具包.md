@@ -18,9 +18,7 @@ aliases:
 
 通过团队工具包项目，把 Skill、SubAgent、Hook、MCP、CI 和插件化分发串成一个完整系统。
 
-本章是团队级综合案例。读者需要先设计需求，不直接堆功能。工具包要能回答：谁使用、解决什么问题
-
-、包含哪些能力、如何安装、如何验证、如何维护。
+本章是团队级综合案例。读者需要先设计需求，不直接堆功能。工具包要能回答：谁使用、解决什么问题、包含哪些能力、如何安装、如何验证、如何维护。
 
 学习目标
 
@@ -36,9 +34,7 @@ aliases:
 
 先做一个小案例
 
-本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -60,13 +56,9 @@ claude "基于本章主题“实战二 - 团队 Claude Code 工具包”，设�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -74,13 +66,11 @@ return 0;
 
 }
 
-目录
-
 • 45.1 需求设计
 
 • 45.1.1 团队角色和使用场景
 
-• 45.1.2 review、test、docs、security 四类能力Claude Code 学习手册
+• 45.1.2 review、test、docs、security 四类能力
 
 • 45.1.3 工具包边界
 
@@ -124,9 +114,7 @@ return 0;
 
 核心概念
 
-需求设计 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+需求设计 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -146,7 +134,7 @@ return 0;
 
 2. 让 Claude Code 先读取或搜索与任务相关的最小资料集。
 
-3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。Claude Code 学习手册
+3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
 4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。
 
@@ -174,13 +162,9 @@ claude "只围绕“需求设计”做一次可验证的小任务：先说明计
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -188,9 +172,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -224,9 +206,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-构建 Skill 与 SubAgents 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。Claude Code 学习手册
+构建 Skill 与 SubAgents 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -276,13 +256,9 @@ claude "只围绕“构建 Skill 与 SubAgents”做一次可验证的小任务�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -290,9 +266,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -308,7 +282,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • [ ] 我能写出一个不会让 Claude Code 误解的任务说明。
 
-• [ ] 我能指出本节任务的输入、输出、风险和验证方式。Claude Code 学习手册
+• [ ] 我能指出本节任务的输入、输出、风险和验证方式。
 
 • [ ] 我能判断 Claude Code 的回答是否基于真实证据。
 
@@ -326,9 +300,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-加入 Hooks、MCP 和 CI 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+加入 Hooks、MCP 和 CI 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -376,23 +348,17 @@ claude "只围绕“加入 Hooks、MCP 和 CI”做一次可验证的小任务�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
 return 0;
 
-}Claude Code 学习手册
+}
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -426,9 +392,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-插件化分发 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+插件化分发 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -458,7 +422,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 Set-Location "D:\AI\claude code学习手册\book\examples\chapter-45"
 
-claude "只围绕“插件化分发”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"Claude Code 学习手册
+claude "只围绕“插件化分发”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"
 
 # macOS / Linux
 
@@ -476,13 +440,9 @@ claude "只围绕“插件化分发”做一次可验证的小任务：先说明
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -490,9 +450,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -520,35 +478,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中
-
-本章案例与练习
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中本章案例与练习
 
 • 案例：构建团队 Claude Code toolkit 插件。
 
@@ -558,7 +488,7 @@ Claude Code
 
 练习答案不要求唯一，但必须满足三个条件：任务边界清楚、输出可验证、结果能沉淀。
 
-本章交付物Claude Code 学习手册
+本章交付物
 
 • team-claude-toolkit/
 
@@ -582,17 +512,9 @@ Claude Code
 
 本章小结
 
-本章围绕“实战二 - 团队 Claude Code
+本章围绕“实战二 - 团队 Claude Code 工具包”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-工具包”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code
-
-在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-到这里，全书正文已经完成。后续应结合附录、模板和工具清单持续打磨个人或团队的 Claude Code
-
-工作系统。
+下一章衔接到这里，全书正文已经完成。后续应结合附录、模板和工具清单持续打磨个人或团队的 Claude Code 工作系统。
 
 本章参考
 
@@ -600,7 +522,5 @@ Claude Code
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-410Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

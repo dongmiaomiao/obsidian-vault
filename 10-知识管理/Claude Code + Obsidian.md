@@ -81,3 +81,4 @@ status: reviewed
 - 10-知识管理/知识库管理守则 — 防垃圾、质量标签、串联模板
 - 10-知识管理/Claude code命令大全 — CC 常用命令速查
 - 10-知识管理/使用 Claude code 做成大项目的诀窍 — CC 项目实战技巧
+- [[Claude Code 学习手册/Claude Code 学习手册|Claude Code 学习手册]] — 系统学习 CC 的完整教程（45章）

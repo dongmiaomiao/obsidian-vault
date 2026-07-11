@@ -1,22 +1,16 @@
 ---
-title: "# Code Reviewing Skill"
+title: "附录 E：Skill 模板库基础 Skill"
 type: appendix
-part: "第十篇：完整实战案例"
+part: "附录"
 source: "Claude Code 学习手册"
 aliases:
 ---
 
-附录 E：Skill 模板库
-
-基础 Skill
+附录 E：Skill 模板库基础 Skill
 
 ---
 
-name: code-reviewing
-
-description: Use when reviewing code changes for bugs, risks, tests, and
-
-maintainability.
+name: code-reviewing description: Use when reviewing code changes for bugs, risks, tests, and maintainability.
 
 ---
 
@@ -24,9 +18,7 @@ maintainability.
 
 ## When to use
 
-Use this skill when the user asks for a code review or wants risk-focused
-
-feedback.
+Use this skill when the user asks for a code review or wants risk-focused feedback.
 
 ## Workflow
 
@@ -38,21 +30,11 @@ feedback.
 
 4. Output findings by severity.
 
-渐进式披露结构
+渐进式披露结构skills/api-documenting/
 
-skills/api-documenting/
+SKILL.md references/
 
-SKILL.md
+standards.md examples.md templates/
 
-references/
-
-standards.md
-
-examples.md
-
-templates/
-
-endpoint.mdClaude Code 学习手册
-
-420Claude Code 学习手册
+endpoint.md
 

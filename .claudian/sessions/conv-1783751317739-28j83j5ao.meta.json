@@ -4,6 +4,19 @@
   "title": "Organize this manual",
   "titleGenerationStatus": "success",
   "createdAt": 1783751317740,
-  "updatedAt": 1783751323059,
-  "sessionId": null
+  "updatedAt": 1783751938706,
+  "lastResponseAt": 1783751938706,
+  "sessionId": "17dfc312-01d7-44bc-83ff-b0114f6f0425",
+  "providerState": {
+    "providerSessionId": "17dfc312-01d7-44bc-83ff-b0114f6f0425"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 30,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 84352,
+    "contextWindow": 200000,
+    "contextTokens": 84382,
+    "percentage": 42
+  }
 }

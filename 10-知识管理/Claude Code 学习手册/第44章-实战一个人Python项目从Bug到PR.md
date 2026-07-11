@@ -1,14 +1,12 @@
 ---
-title: "第 44 章：实战一 - 个人 Python 项目从 Bug 到"
+title: "第 44 章：实战一 - 个人 Python 项目从 Bug 到PR"
 type: chapter
-part: "第九篇：高级驾驭工程 - 从会用到会设计 Agent 工作系统"
+part: "第十篇：完整实战案例"
 source: "Claude Code 学习手册"
 aliases:
 ---
 
-第 44 章：实战一 - 个人 Python 项目从 Bug 到
-
-PR
+第 44 章：实战一 - 个人 Python 项目从 Bug 到PR
 
 所属篇章：第十篇：完整实战案例
 
@@ -20,9 +18,7 @@ PR
 
 通过完整个人项目，把前面学到的代码理解、Bug 修复、测试、记忆、Git 和 PR 流程串起来。
 
-本章是个人实战案例，必须完整闭环。读者从项目初始化开始，编写规则和记忆，修复真实
-
-Bug，补充测试，生成 PR 描述，最后把成功流程沉淀为模板。
+本章是个人实战案例，必须完整闭环。读者从项目初始化开始，编写规则和记忆，修复真实Bug，补充测试，生成 PR 描述，最后把成功流程沉淀为模板。
 
 学习目标
 
@@ -38,9 +34,7 @@ Bug，补充测试，生成 PR 描述，最后把成功流程沉淀为模板。
 
 先做一个小案例
 
-本章先使用 C# 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 C# 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -54,35 +48,19 @@ cd ~/claude-code-handbook/book/examples/chapter-44
 
 claude "基于本章主题“实战一 - 个人 Python 项目从 Bug 到 PR”，设计一个最小可执行案例，并给出验证清单。"
 
-案例中的最小代码对象如下：
-
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+案例中的最小代码对象如下：using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
-
-}
+Directory.Exists(fullPath)}");}
 
 }
 
 ProjectInspector.Summarize("README.md");
-
-目录Claude Code 学习手册
 
 • 44.1 项目初始化
 
@@ -132,9 +110,7 @@ ProjectInspector.Summarize("README.md");
 
 核心概念
 
-项目初始化 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+项目初始化 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -144,11 +120,9 @@ ProjectInspector.Summarize("README.md");
 
 • 44.1.3 制造可控 Bug：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 C#。用一个 C# 控制台或 Web API
+本节主案例语言是 C#。用一个 C# 控制台或 Web API 项目作为观察对象，重点展示项目结构、构建命令和类型约束。
 
-项目作为观察对象，重点展示项目结构、构建命令和类型约束。
-
-操作步骤Claude Code 学习手册
+操作步骤
 
 1. 明确当前任务只覆盖本节范围，不把后续章节内容提前展开。
 
@@ -176,35 +150,19 @@ claude "只围绕“项目初始化”做一次可验证的小任务：先说明
 
 下面的示例不是为了展示复杂代码，而是为了给 Claude Code 一个可以读取、运行或解释的最小对象。
 
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
+Directory.Exists(fullPath)}");}
 
 }
 
-}
-
-ProjectInspector.Summarize("README.md");
-
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+ProjectInspector.Summarize("README.md");可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -230,7 +188,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 理解 规则与记忆 在本章主题中的具体作用。
 
-• 能把 规则与记忆 转化为一个可执行、可验证的 Claude Code 任务。Claude Code 学习手册
+• 能把 规则与记忆 转化为一个可执行、可验证的 Claude Code 任务。
 
 • 能识别这一节常见的误用场景，并知道如何修正。
 
@@ -238,9 +196,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-规则与记忆 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+规则与记忆 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -250,9 +206,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • 44.2.3 添加 Git 规则：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 C#。用一个 C# 控制台或 Web API
-
-项目作为观察对象，重点展示项目结构、构建命令和类型约束。
+本节主案例语言是 C#。用一个 C# 控制台或 Web API 项目作为观察对象，重点展示项目结构、构建命令和类型约束。
 
 操作步骤
 
@@ -282,39 +236,23 @@ claude "只围绕“规则与记忆”做一次可验证的小任务：先说明
 
 下面的示例不是为了展示复杂代码，而是为了给 Claude Code 一个可以读取、运行或解释的最小对象。
 
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
+Directory.Exists(fullPath)}");}
 
 }
 
-}
-
-ProjectInspector.Summarize("README.md");
-
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+ProjectInspector.Summarize("README.md");可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
-• 练习 1：把 规则与记忆 改写成一个包含目标、范围、限制、输出格式的提示词。Claude Code 学习手册
+• 练习 1：把 规则与记忆 改写成一个包含目标、范围、限制、输出格式的提示词。
 
 • 练习 2：要求 Claude Code 先列计划，不直接修改文件。
 
@@ -344,9 +282,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-Bug 定位与修复 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+Bug 定位与修复 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -358,9 +294,7 @@ Bug 定位与修复 的重点不是记住术语，而是把它放回真实工程
 
 • 44.3.4 运行验证：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 C#。用一个 C# 控制台或 Web API
-
-项目作为观察对象，重点展示项目结构、构建命令和类型约束。
+本节主案例语言是 C#。用一个 C# 控制台或 Web API 项目作为观察对象，重点展示项目结构、构建命令和类型约束。
 
 操作步骤
 
@@ -384,41 +318,25 @@ claude "只围绕“Bug 定位与修复”做一次可验证的小任务：先�
 
 cd ~/claude-code-handbook/book/examples/chapter-44
 
-claude "只围绕“Bug 定位与修复”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"Claude Code 学习手册
+claude "只围绕“Bug 定位与修复”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"
 
 示例
 
 下面的示例不是为了展示复杂代码，而是为了给 Claude Code 一个可以读取、运行或解释的最小对象。
 
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
+Directory.Exists(fullPath)}");}
 
 }
 
-}
-
-ProjectInspector.Summarize("README.md");
-
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+ProjectInspector.Summarize("README.md");可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -452,9 +370,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-PR 与复盘 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+PR 与复盘 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -462,11 +378,9 @@ PR 与复盘 的重点不是记住术语，而是把它放回真实工程动作�
 
 • 44.4.2 更新知识库：先解释它解决的问题，再给出一个可观察的操作。
 
-• 44.4.3 将流程沉淀为命令或 Skill：先解释它解决的问题，再给出一个可观察的操作。Claude Code 学习手册
+• 44.4.3 将流程沉淀为命令或 Skill：先解释它解决的问题，再给出一个可观察的操作。
 
-本节主案例语言是 C#。用一个 C# 控制台或 Web API
-
-项目作为观察对象，重点展示项目结构、构建命令和类型约束。
+本节主案例语言是 C#。用一个 C# 控制台或 Web API 项目作为观察对象，重点展示项目结构、构建命令和类型约束。
 
 操作步骤
 
@@ -496,35 +410,19 @@ claude "只围绕“PR 与复盘”做一次可验证的小任务：先说明计
 
 下面的示例不是为了展示复杂代码，而是为了给 Claude Code 一个可以读取、运行或解释的最小对象。
 
-using System;
-
-using System.IO;
-
-public static class ProjectInspector
-
-{
+using System;using System.IO;public static class ProjectInspector{
 
 public static void Summarize(string path)
 
 {
 
-var fullPath = Path.GetFullPath(path);
+var fullPath = Path.GetFullPath(path);Console.WriteLine($"Path: {fullPath}");Console.WriteLine($"Exists: {File.Exists(fullPath) ||
 
-Console.WriteLine($"Path: {fullPath}");
-
-Console.WriteLine($"Exists: {File.Exists(fullPath) ||
-
-Directory.Exists(fullPath)}");
+Directory.Exists(fullPath)}");}
 
 }
 
-}
-
-ProjectInspector.Summarize("README.md");
-
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+ProjectInspector.Summarize("README.md");可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -544,7 +442,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • [ ] 我能判断 Claude Code 的回答是否基于真实证据。
 
-常见坑与排查Claude Code 学习手册
+常见坑与排查
 
 常见问题
 
@@ -552,35 +450,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中
-
-本章案例与练习
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中本章案例与练习
 
 • 案例：完成一个 Python CLI 或 API 项目的 Bug 修复 PR。
 
@@ -616,23 +486,15 @@ Claude Code
 
 本章小结
 
-本章围绕“实战一 - 个人 Python 项目从 Bug 到
+本章围绕“实战一 - 个人 Python 项目从 Bug 到PR”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-PR”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code
-
-在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“实战二 - 团队 Claude Code 工具包”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“实战二 - 团队 Claude Code 工具包”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
 • 官方总览：https://code.claude.com/docs/zh-CN/overview
 
-• 记忆系统：https://code.claude.com/docs/zh-CN/memoryClaude Code 学习手册
+• 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-401Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

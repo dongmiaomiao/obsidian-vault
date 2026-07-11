@@ -18,11 +18,7 @@ aliases:
 
 把单个 CLAUDE.md 扩展成多文件规则体系，并理解不同 Agent 工具之间规则文件的关系。
 
-本章解决 CLAUDE.md
-
-越写越大的问题。将测试、安全、Git、API、数据库等规则拆成独立文件，并通过索引让 Claude Code
-
-按需读取。AGENTS.md 只做概念对照，重点仍是 Claude Code 的项目规则管理。
+本章解决 CLAUDE.md 越写越大的问题。将测试、安全、Git、API、数据库等规则拆成独立文件，并通过索引让 Claude Code 按需读取。AGENTS.md 只做概念对照，重点仍是 Claude Code 的项目规则管理。
 
 学习目标
 
@@ -38,9 +34,7 @@ aliases:
 
 先做一个小案例
 
-本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -62,13 +56,9 @@ claude "基于本章主题“项目规则、`AGENTS.md` 和规则文件夹”，
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -76,13 +66,11 @@ return 0;
 
 }
 
-目录
-
 • 12.1 多文件规则架构
 
 • 12.1.1 为什么拆分规则
 
-• 12.1.2 .claude/rules/testing.mdClaude Code 学习手册
+• 12.1.2 .claude/rules/testing.md
 
 • 12.1.3 .claude/rules/security.md
 
@@ -124,9 +112,7 @@ return 0;
 
 核心概念
 
-多文件规则架构 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+多文件规则架构 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -148,7 +134,7 @@ return 0;
 
 3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
-4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。Claude Code 学习手册
+4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。
 
 5. 完成后用检查清单验证结果，而不是只看回答是否流畅。
 
@@ -174,13 +160,9 @@ claude "只围绕“多文件规则架构”做一次可验证的小任务：先
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -188,9 +170,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -224,11 +204,9 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-条件化规则 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
+条件化规则 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
-
-本节可以按下面的顺序理解：Claude Code 学习手册
+本节可以按下面的顺序理解：
 
 • 12.2.1 API 规则：先解释它解决的问题，再给出一个可观察的操作。
 
@@ -274,13 +252,9 @@ claude "只围绕“条件化规则”做一次可验证的小任务：先说明
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -288,9 +262,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -308,7 +280,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • [ ] 我能指出本节任务的输入、输出、风险和验证方式。
 
-• [ ] 我能判断 Claude Code 的回答是否基于真实证据。Claude Code 学习手册
+• [ ] 我能判断 Claude Code 的回答是否基于真实证据。
 
 12.3 AGENTS.md 对照
 
@@ -324,9 +296,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-AGENTS.md 对照 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+AGENTS.md 对照 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -374,13 +344,9 @@ claude "只围绕“`AGENTS.md` 对照”做一次可验证的小任务：先说
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -388,9 +354,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。Claude Code 学习手册
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -424,9 +388,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-规则冲突处理 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+规则冲突处理 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -462,7 +424,7 @@ claude "只围绕“规则冲突处理”做一次可验证的小任务：先说
 
 cd ~/claude-code-handbook/book/examples/chapter-12
 
-claude "只围绕“规则冲突处理”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"Claude Code 学习手册
+claude "只围绕“规则冲突处理”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"
 
 示例
 
@@ -474,13 +436,9 @@ claude "只围绕“规则冲突处理”做一次可验证的小任务：先说
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -488,9 +446,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -518,35 +474,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中
-
-本章案例与练习
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中本章案例与练习
 
 • 案例：把一个 200 行规则文件拆成索引和多个规则文件。
 
@@ -558,7 +486,7 @@ Claude Code
 
 本章交付物
 
-• .claude/rules/testing.mdClaude Code 学习手册
+• .claude/rules/testing.md
 
 • .claude/rules/security.md
 
@@ -580,15 +508,9 @@ Claude Code
 
 本章小结
 
-本章围绕“项目规则、AGENTS.md
+本章围绕“项目规则、AGENTS.md 和规则文件夹”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-和规则文件夹”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code
-
-在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“本地知识库”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“本地知识库”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
@@ -596,7 +518,5 @@ Claude Code
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-112Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

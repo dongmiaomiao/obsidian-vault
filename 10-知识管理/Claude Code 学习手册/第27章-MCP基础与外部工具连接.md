@@ -18,9 +18,7 @@ aliases:
 
 让读者理解 MCP 是连接外部系统的协议，并掌握基本配置和安全边界。
 
-本章不把 MCP 当成神秘高级功能，而是从“Claude Code
-
-需要访问外部资料”这个问题出发。读者要学会配置、检查、限制和审计 MCP。
+本章不把 MCP 当成神秘高级功能，而是从“Claude Code 需要访问外部资料”这个问题出发。读者要学会配置、检查、限制和审计 MCP。
 
 学习目标
 
@@ -36,9 +34,7 @@ aliases:
 
 先做一个小案例
 
-本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让
-
-Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
+本章先使用 C++ 项目做一个最小案例。目标不是一次性完成复杂工程，而是训练“提出明确任务 -> 让Claude Code 探索 -> 获取可验证输出 -> 记录结果”的闭环。
 
 # Windows PowerShell
 
@@ -60,13 +56,9 @@ claude "基于本章主题“MCP 基础与外部工具连接”，设计一个�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -74,13 +66,11 @@ return 0;
 
 }
 
-目录
-
 • 27.1 MCP 解决什么问题
 
 • 27.1.1 本地工具
 
-• 27.1.2 数据库和 APIClaude Code 学习手册
+• 27.1.2 数据库和 API
 
 • 27.1.3 知识库和 issue 系统
 
@@ -122,9 +112,7 @@ return 0;
 
 核心概念
 
-MCP 解决什么问题 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+MCP 解决什么问题 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -146,7 +134,7 @@ MCP 解决什么问题 的重点不是记住术语，而是把它放回真实工
 
 3. 要求 Claude Code 输出它基于哪些文件、命令或文档得出结论。
 
-4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。Claude Code 学习手册
+4. 让 Claude Code 给出可执行步骤，并在执行前说明风险。
 
 5. 完成后用检查清单验证结果，而不是只看回答是否流畅。
 
@@ -172,13 +160,9 @@ claude "只围绕“MCP 解决什么问题”做一次可验证的小任务：�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -186,9 +170,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -222,11 +204,9 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-MCP 配置 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
+MCP 配置 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
-
-本节可以按下面的顺序理解：Claude Code 学习手册
+本节可以按下面的顺序理解：
 
 • 27.2.1 Server 启动方式：先解释它解决的问题，再给出一个可观察的操作。
 
@@ -272,13 +252,9 @@ claude "只围绕“MCP 配置”做一次可验证的小任务：先说明计�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -286,9 +262,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -306,7 +280,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 • [ ] 我能指出本节任务的输入、输出、风险和验证方式。
 
-• [ ] 我能判断 Claude Code 的回答是否基于真实证据。Claude Code 学习手册
+• [ ] 我能判断 Claude Code 的回答是否基于真实证据。
 
 27.3 MCP 安全
 
@@ -322,9 +296,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-MCP 安全 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+MCP 安全 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -372,13 +344,9 @@ claude "只围绕“MCP 安全”做一次可验证的小任务：先说明计�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -386,9 +354,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。Claude Code 学习手册
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -422,9 +388,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 核心概念
 
-MCP 案例 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code
-
-来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
+MCP 案例 的重点不是记住术语，而是把它放回真实工程动作里理解。对于 Claude Code 来说，一个好的任务必须同时说明目标、边界、可用资料、允许执行的动作和验收方式。
 
 本节可以按下面的顺序理解：
 
@@ -460,7 +424,7 @@ claude "只围绕“MCP 案例”做一次可验证的小任务：先说明计�
 
 cd ~/claude-code-handbook/book/examples/chapter-27
 
-claude "只围绕“MCP 案例”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"Claude Code 学习手册
+claude "只围绕“MCP 案例”做一次可验证的小任务：先说明计划，再给出操作步骤、验证方式和风险。"
 
 示例
 
@@ -472,13 +436,9 @@ claude "只围绕“MCP 案例”做一次可验证的小任务：先说明计�
 
 int main() {
 
-std::filesystem::path target{"README.md"};
+std::filesystem::path target{"README.md"};std::cout << "Path: " << std::filesystem::absolute(target) << "
 
-std::cout << "Path: " << std::filesystem::absolute(target) << "
-
-";
-
-std::cout << "Exists: " << std::filesystem::exists(target) << "
+";std::cout << "Exists: " << std::filesystem::exists(target) << "
 
 ";
 
@@ -486,9 +446,7 @@ return 0;
 
 }
 
-可以把这段代码交给 Claude
-
-Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
+可以把这段代码交给 Claude Code，并要求它只完成一个小目标：解释入口、指出潜在问题、补一个测试，或者生成一段文档。
 
 练习
 
@@ -516,35 +474,7 @@ Code，并要求它只完成一个小目标：解释入口、指出潜在问题�
 
 处理方式
 
-任务描述过宽
-
-Claude Code
-
-一次读取过多文件或输出泛泛总结
-
-缩小范围，明确只处理一个小节或一个文件
-
-缺少验收标准
-
-看起来完成，但无法判断是否正确
-
-在提示词中加入测试、检查清单或输出格式
-
-忽略上下文边界
-
-模型引用无关资料或过期规则
-
-要求列出依据文件，并清理无关上下文
-
-没有记录结果
-
-下次还要重新解释同一规则
-
-将有效流程沉淀到 Markdown、命令或 Skill
-
-中
-
-本章案例与练习
+任务描述过宽Claude Code 一次读取过多文件或输出泛泛总结缩小范围，明确只处理一个小节或一个文件缺少验收标准看起来完成，但无法判断是否正确在提示词中加入测试、检查清单或输出格式忽略上下文边界模型引用无关资料或过期规则要求列出依据文件，并清理无关上下文没有记录结果下次还要重新解释同一规则将有效流程沉淀到 Markdown、命令或 Skill 中本章案例与练习
 
 • 案例：配置一个本地知识库 MCP。
 
@@ -556,7 +486,7 @@ Claude Code
 
 本章交付物
 
-• docs/mcp-config-notes.mdClaude Code 学习手册
+• docs/mcp-config-notes.md
 
 • docs/mcp-security-policy.md
 
@@ -576,15 +506,9 @@ Claude Code
 
 本章小结
 
-本章围绕“MCP
+本章围绕“MCP 基础与外部工具连接”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
 
-基础与外部工具连接”建立了一套可执行学习流程。真正的掌握标准不是记住概念，而是能让 Claude
-
-Code 在明确边界内完成任务，并通过证据、测试或检查清单验证结果。
-
-下一章衔接
-
-下一章将进入“Plugins 插件系统”，继续把本章方法扩展到新的 Claude Code 使用场景。
+下一章衔接下一章将进入“Plugins 插件系统”，继续把本章方法扩展到新的 Claude Code 使用场景。
 
 本章参考
 
@@ -592,7 +516,5 @@ Code 在明确边界内完成任务，并通过证据、测试或检查清单验
 
 • 记忆系统：https://code.claude.com/docs/zh-CN/memory
 
-• Skills：https://code.claude.com/docs/zh-CN/skillsClaude Code 学习手册
-
-247Claude Code 学习手册
+• Skills：https://code.claude.com/docs/zh-CN/skills
 

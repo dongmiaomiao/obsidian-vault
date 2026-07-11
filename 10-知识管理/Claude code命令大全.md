@@ -1,3 +1,17 @@
+---
+tags:
+  - Claude Code
+  - 命令
+  - 速查
+alias:
+  - CC命令
+  - CC指令
+---
+
+# Claude Code 常用命令速查
+
+> 完整学习路径参见 [[Claude Code 学习手册/Claude Code 学习手册|Claude Code 学习手册]]
+
 /clear	清除对话历史
 /resume	恢复之前的会话
 /branch	从当前点创建新的对话

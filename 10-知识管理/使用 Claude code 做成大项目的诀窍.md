@@ -9,6 +9,10 @@ alias:
 status: reviewed
 ---
 
+# 使用 Claude Code 做成大项目的诀窍
+
+> 系统学习推荐 [[Claude Code 学习手册/Claude Code 学习手册|Claude Code 学习手册]]
+
 一、不要只说帮我做个工具，而是说清楚这个工具给谁用，解决什么问题
 1）输入是什么
 2）输出是什么

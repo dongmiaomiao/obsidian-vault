@@ -1,16 +1,12 @@
 ---
-title: "# MCP Server: 名称"
+title: "附录 G：MCP 配置示例MCP 用于把 Claude Code 连接到外部工具或数据源。实际配置应以当前 Claude Code 官方文档和所用MCP Server 文档为准。"
 type: appendix
-part: "第十篇：完整实战案例"
+part: "附录"
 source: "Claude Code 学习手册"
 aliases:
 ---
 
-附录 G：MCP 配置示例
-
-MCP 用于把 Claude Code 连接到外部工具或数据源。实际配置应以当前 Claude Code 官方文档和所用
-
-MCP Server 文档为准。
+附录 G：MCP 配置示例MCP 用于把 Claude Code 连接到外部工具或数据源。实际配置应以当前 Claude Code 官方文档和所用MCP Server 文档为准。
 
 安全原则
 
@@ -36,7 +32,5 @@ MCP Server 文档为准。
 
 ## 禁止事项
 
-## 验证命令Claude Code 学习手册
-
-424Claude Code 学习手册
+## 验证命令
 

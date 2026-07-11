@@ -1,14 +1,12 @@
 ---
-title: "# Project Rules"
+title: "附录 C：Markdown 写作模板项目规则模板"
 type: appendix
-part: "第十篇：完整实战案例"
+part: "附录"
 source: "Claude Code 学习手册"
 aliases:
 ---
 
-附录 C：Markdown 写作模板
-
-项目规则模板
+附录 C：Markdown 写作模板项目规则模板
 
 # Project Rules
 
@@ -54,7 +52,5 @@ ADR 模板
 
 ## 后果
 
-## 复查时间Claude Code 学习手册
-
-416Claude Code 学习手册
+## 复查时间
 

@@ -1,20 +1,16 @@
 ---
-title: "附录/附录F-SubAgent模板库"
+title: "附录 F：SubAgent 模板库code-reviewer"
 type: appendix
-part: "第十篇：完整实战案例"
+part: "附录"
 source: "Claude Code 学习手册"
 aliases:
 ---
 
-附录 F：SubAgent 模板库
-
-code-reviewer
+附录 F：SubAgent 模板库code-reviewer
 
 ---
 
-name: code-reviewer
-
-description: Read-only reviewer for code diffs.
+name: code-reviewer description: Read-only reviewer for code diffs.
 
 tools: Read, Grep, Glob
 
@@ -28,17 +24,11 @@ test-runner
 
 ---
 
-name: test-runner
-
-description: Runs tests and summarizes failures.
+name: test-runner description: Runs tests and summarizes failures.
 
 tools: Bash, Read
 
 ---
 
-Run the requested tests, summarize failures, and return only actionable
-
-conclusions.Claude Code 学习手册
-
-422Claude Code 学习手册
+Run the requested tests, summarize failures, and return only actionable conclusions.
 
