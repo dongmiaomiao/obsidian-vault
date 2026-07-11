@@ -1,0 +1,23 @@
+{
+  "id": "conv-1783752607819-oe5a3xxwe",
+  "providerId": "claude",
+  "title": "Describe AI response context",
+  "titleGenerationStatus": "success",
+  "createdAt": 1783752607819,
+  "updatedAt": 1783752717831,
+  "lastResponseAt": 1783752717831,
+  "sessionId": "f85c7632-cef9-454c-b83c-80cd56f517df",
+  "providerState": {
+    "providerSessionId": "f85c7632-cef9-454c-b83c-80cd56f517df"
+  },
+  "currentNote": "感谢身边的你们.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 135,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 25344,
+    "contextWindow": 200000,
+    "contextTokens": 25479,
+    "percentage": 13
+  }
+}
