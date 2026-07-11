@@ -4,19 +4,19 @@
   "title": "Describe AI response context",
   "titleGenerationStatus": "success",
   "createdAt": 1783752607819,
-  "updatedAt": 1783757349425,
-  "lastResponseAt": 1783757349425,
+  "updatedAt": 1783757852531,
+  "lastResponseAt": 1783757852531,
   "sessionId": "f85c7632-cef9-454c-b83c-80cd56f517df",
   "providerState": {
     "providerSessionId": "f85c7632-cef9-454c-b83c-80cd56f517df"
   },
   "usage": {
     "model": "opus",
-    "inputTokens": 87,
+    "inputTokens": 424,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 47744,
+    "cacheReadInputTokens": 55424,
     "contextWindow": 200000,
-    "contextTokens": 47831,
-    "percentage": 24
+    "contextTokens": 55848,
+    "percentage": 28
   }
 }
