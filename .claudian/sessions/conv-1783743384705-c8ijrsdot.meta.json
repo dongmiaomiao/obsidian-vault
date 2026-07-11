@@ -4,8 +4,8 @@
   "title": "Organize content into materials",
   "titleGenerationStatus": "success",
   "createdAt": 1783743384705,
-  "updatedAt": 1783743428088,
-  "lastResponseAt": 1783743428088,
+  "updatedAt": 1783744545390,
+  "lastResponseAt": 1783744545390,
   "sessionId": "a13abe82-0af7-4b6a-ae09-416eb8eb9552",
   "providerState": {
     "providerSessionId": "a13abe82-0af7-4b6a-ae09-416eb8eb9552"
@@ -13,11 +13,11 @@
   "currentNote": "不是想证明给别人看，而是想把那个快要熄灭的自己重新点燃.md",
   "usage": {
     "model": "opus",
-    "inputTokens": 199,
+    "inputTokens": 75,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 23168,
+    "cacheReadInputTokens": 30720,
     "contextWindow": 200000,
-    "contextTokens": 23367,
-    "percentage": 12
+    "contextTokens": 30795,
+    "percentage": 15
   }
 }
