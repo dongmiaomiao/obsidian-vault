@@ -1,0 +1,23 @@
+{
+  "id": "conv-1786429391750-3hsfev8aj",
+  "providerId": "claude",
+  "title": "Organize study notes into usable Obsidian knowl...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786429391750,
+  "updatedAt": 1786429489402,
+  "lastResponseAt": 1786429489402,
+  "sessionId": "f6871efd-0f89-4192-9f15-2c9fceaacea5",
+  "providerState": {
+    "providerSessionId": "f6871efd-0f89-4192-9f15-2c9fceaacea5"
+  },
+  "currentNote": "PMP 项目管理.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 130,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 27904,
+    "contextWindow": 200000,
+    "contextTokens": 28034,
+    "percentage": 14
+  }
+}

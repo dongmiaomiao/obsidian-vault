@@ -4,6 +4,19 @@
   "title": "整理口语化视频课笔记存入Obsidian",
   "titleGenerationStatus": "success",
   "createdAt": 1786429342974,
-  "updatedAt": 1786429355036,
-  "sessionId": null
+  "updatedAt": 1786429369200,
+  "lastResponseAt": 1786429363029,
+  "sessionId": "7b157816-1f7f-4587-ae53-40f40692cf8b",
+  "providerState": {
+    "providerSessionId": "7b157816-1f7f-4587-ae53-40f40692cf8b"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 184,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 20096,
+    "contextWindow": 200000,
+    "contextTokens": 20280,
+    "percentage": 10
+  }
 }
