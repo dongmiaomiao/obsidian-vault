@@ -1,0 +1,22 @@
+{
+  "id": "conv-1787296447622-kzc9w6exz",
+  "providerId": "claude",
+  "title": "Organize user's content",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787296447622,
+  "updatedAt": 1787296822310,
+  "lastResponseAt": 1787296807922,
+  "sessionId": "7172be43-9be0-48e1-aacd-21b096a98bd3",
+  "providerState": {
+    "providerSessionId": "7172be43-9be0-48e1-aacd-21b096a98bd3"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 2581,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 23168,
+    "contextWindow": 200000,
+    "contextTokens": 25749,
+    "percentage": 13
+  }
+}
