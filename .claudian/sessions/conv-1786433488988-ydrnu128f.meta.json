@@ -4,13 +4,12 @@
   "title": "Organize study notes for personal Obsidian use",
   "titleGenerationStatus": "success",
   "createdAt": 1786433488988,
-  "updatedAt": 1786433578324,
+  "updatedAt": 1787293110277,
   "lastResponseAt": 1786433578324,
   "sessionId": "18701c69-9104-4f97-8c08-945074913747",
   "providerState": {
     "providerSessionId": "18701c69-9104-4f97-8c08-945074913747"
   },
-  "currentNote": "模考题笔记.md",
   "usage": {
     "model": "opus",
     "inputTokens": 161,
