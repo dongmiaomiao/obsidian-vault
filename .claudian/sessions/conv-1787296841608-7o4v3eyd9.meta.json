@@ -4,13 +4,12 @@
   "title": "给当前内容起个标题",
   "titleGenerationStatus": "failed",
   "createdAt": 1787296841608,
-  "updatedAt": 1787302877199,
+  "updatedAt": 1787303281332,
   "lastResponseAt": 1787302877199,
   "sessionId": "9e446921-7750-4043-8e35-b7f09b888f60",
   "providerState": {
     "providerSessionId": "9e446921-7750-4043-8e35-b7f09b888f60"
   },
-  "currentNote": "《上岸前的碎碎念》/未命名 2.md",
   "usage": {
     "model": "opus",
     "inputTokens": 90,

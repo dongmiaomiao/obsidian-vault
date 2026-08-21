@@ -1,0 +1,23 @@
+{
+  "id": "conv-1787303302097-ssoppi2b6",
+  "providerId": "claude",
+  "title": "Express grief after receiving court judgment",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787303302097,
+  "updatedAt": 1787303319066,
+  "lastResponseAt": 1787303319066,
+  "sessionId": "59717acc-985f-4d9a-8c18-db609e50cb4f",
+  "providerState": {
+    "providerSessionId": "59717acc-985f-4d9a-8c18-db609e50cb4f"
+  },
+  "currentNote": "00-收件箱/日记/2026-08-18.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 398,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 20352,
+    "contextWindow": 200000,
+    "contextTokens": 20750,
+    "percentage": 10
+  }
+}
