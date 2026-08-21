@@ -4,8 +4,8 @@
   "title": "提炼章节核心内容并给出建议",
   "titleGenerationStatus": "success",
   "createdAt": 1787308460267,
-  "updatedAt": 1787308498179,
-  "lastResponseAt": 1787308498179,
+  "updatedAt": 1787308720670,
+  "lastResponseAt": 1787308720670,
   "sessionId": "17e83457-ec5f-47d2-97e2-4be0ce32b4ca",
   "providerState": {
     "providerSessionId": "17e83457-ec5f-47d2-97e2-4be0ce32b4ca"
@@ -13,11 +13,11 @@
   "currentNote": "10-知识管理/读书笔记/认知觉醒/Ch07-S1-情绪力-情绪是多角度看问题的智慧.md",
   "usage": {
     "model": "opus",
-    "inputTokens": 2703,
+    "inputTokens": 157,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 20352,
+    "cacheReadInputTokens": 37120,
     "contextWindow": 200000,
-    "contextTokens": 23055,
-    "percentage": 12
+    "contextTokens": 37277,
+    "percentage": 19
   }
 }
