@@ -4,6 +4,20 @@
   "title": "Organize document content",
   "titleGenerationStatus": "success",
   "createdAt": 1787294412663,
-  "updatedAt": 1787294416789,
-  "sessionId": null
+  "updatedAt": 1787294711670,
+  "lastResponseAt": 1787294711670,
+  "sessionId": "532a6afc-47ec-4dbd-b359-4df9c696cdae",
+  "providerState": {
+    "providerSessionId": "532a6afc-47ec-4dbd-b359-4df9c696cdae"
+  },
+  "currentNote": "10-知识管理/读书笔记/认知觉醒/Ch07-S1-情绪力-情绪是多角度看问题的智慧.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 2205,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 40832,
+    "contextWindow": 200000,
+    "contextTokens": 43037,
+    "percentage": 22
+  }
 }
