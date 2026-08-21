@@ -1,0 +1,22 @@
+{
+  "id": "conv-1787306447215-cipns0bbc",
+  "providerId": "claude",
+  "title": "Organize text content in current file",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787306447216,
+  "updatedAt": 1787306516492,
+  "lastResponseAt": 1787306483902,
+  "sessionId": "08e9204c-dd44-48c9-ab32-5531de0a75f6",
+  "providerState": {
+    "providerSessionId": "08e9204c-dd44-48c9-ab32-5531de0a75f6"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 106,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 22912,
+    "contextWindow": 200000,
+    "contextTokens": 23018,
+    "percentage": 12
+  }
+}

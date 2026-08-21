@@ -1,0 +1,22 @@
+{
+  "id": "conv-1787306333680-zqs1qzu9b",
+  "providerId": "claude",
+  "title": "Organize current file content logically",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787306333680,
+  "updatedAt": 1787306444979,
+  "lastResponseAt": 1787306379635,
+  "sessionId": "cbd7858d-39a8-42f6-a540-8f61c2b14cf3",
+  "providerState": {
+    "providerSessionId": "cbd7858d-39a8-42f6-a540-8f61c2b14cf3"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 50,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 23552,
+    "contextWindow": 200000,
+    "contextTokens": 23602,
+    "percentage": 12
+  }
+}
