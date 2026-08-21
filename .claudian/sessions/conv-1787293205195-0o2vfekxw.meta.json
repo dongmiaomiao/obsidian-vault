@@ -4,13 +4,12 @@
   "title": "Analyze inspiration transfer and self-reflection",
   "titleGenerationStatus": "success",
   "createdAt": 1787293205196,
-  "updatedAt": 1787293276495,
+  "updatedAt": 1787294300276,
   "lastResponseAt": 1787293276495,
   "sessionId": "48ba1098-6daf-489e-9568-bb535671c673",
   "providerState": {
     "providerSessionId": "48ba1098-6daf-489e-9568-bb535671c673"
   },
-  "currentNote": "10-知识管理/读书笔记/认知觉醒/Ch07-S1-情绪力-情绪是多角度看问题的智慧.md",
   "usage": {
     "model": "opus",
     "inputTokens": 1221,
