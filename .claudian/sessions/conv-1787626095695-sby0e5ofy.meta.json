@@ -1,0 +1,23 @@
+{
+  "id": "conv-1787626095695-sby0e5ofy",
+  "providerId": "claude",
+  "title": "整理个人感悟并补充命名",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787626095696,
+  "updatedAt": 1787626341016,
+  "lastResponseAt": 1787626341016,
+  "sessionId": "991a1775-b067-4f6e-a4de-58ffb7c70793",
+  "providerState": {
+    "providerSessionId": "991a1775-b067-4f6e-a4de-58ffb7c70793"
+  },
+  "currentNote": "未命名 1.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 97,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 43520,
+    "contextWindow": 200000,
+    "contextTokens": 43617,
+    "percentage": 22
+  }
+}
