@@ -1,0 +1,22 @@
+{
+  "id": "conv-1787629468357-wpojtn4xb",
+  "providerId": "claude",
+  "title": "Diagnose anxiety, collapse, pain academically",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787629468357,
+  "updatedAt": 1787629754124,
+  "lastResponseAt": 1787629754124,
+  "sessionId": "2316d1a6-cd7d-40d8-8bd6-03c758364140",
+  "providerState": {
+    "providerSessionId": "2316d1a6-cd7d-40d8-8bd6-03c758364140"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 216,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 49792,
+    "contextWindow": 200000,
+    "contextTokens": 50008,
+    "percentage": 25
+  }
+}
