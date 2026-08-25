@@ -1,0 +1,22 @@
+{
+  "id": "conv-1787628841982-2lvjkt544",
+  "providerId": "claude",
+  "title": "Name emotional pain with scholarly terminology",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787628841983,
+  "updatedAt": 1787629037660,
+  "lastResponseAt": 1787629037660,
+  "sessionId": "54099ebd-a749-487e-b852-75375c3899da",
+  "providerState": {
+    "providerSessionId": "54099ebd-a749-487e-b852-75375c3899da"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 47,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 38656,
+    "contextWindow": 200000,
+    "contextTokens": 38703,
+    "percentage": 19
+  }
+}
