@@ -1,0 +1,22 @@
+{
+  "id": "conv-1787627416177-wx0rqbmu9",
+  "providerId": "claude",
+  "title": "Name anxiety and pain using scholarly terms",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787627416177,
+  "updatedAt": 1787627724900,
+  "lastResponseAt": 1787627724900,
+  "sessionId": "8fa4d9fa-fa9a-4364-b931-7a9e03a1d320",
+  "providerState": {
+    "providerSessionId": "8fa4d9fa-fa9a-4364-b931-7a9e03a1d320"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 127,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 55552,
+    "contextWindow": 200000,
+    "contextTokens": 55679,
+    "percentage": 28
+  }
+}
