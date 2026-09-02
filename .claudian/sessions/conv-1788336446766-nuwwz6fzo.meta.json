@@ -4,6 +4,19 @@
   "title": "整理当前未命名内容",
   "titleGenerationStatus": "success",
   "createdAt": 1788336446767,
-  "updatedAt": 1788336458315,
-  "sessionId": null
+  "updatedAt": 1788336625187,
+  "lastResponseAt": 1788336625187,
+  "sessionId": "b80b3e2d-68c5-4d6c-909d-73847b5d877b",
+  "providerState": {
+    "providerSessionId": "b80b3e2d-68c5-4d6c-909d-73847b5d877b"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 82,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 36352,
+    "contextWindow": 200000,
+    "contextTokens": 36434,
+    "percentage": 18
+  }
 }
