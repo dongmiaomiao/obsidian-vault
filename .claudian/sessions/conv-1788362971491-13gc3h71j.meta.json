@@ -1,0 +1,23 @@
+{
+  "id": "conv-1788362971491-13gc3h71j",
+  "providerId": "claude",
+  "title": "Organize current untitled file content",
+  "titleGenerationStatus": "success",
+  "createdAt": 1788362971492,
+  "updatedAt": 1788363097466,
+  "lastResponseAt": 1788363097466,
+  "sessionId": "5f67f2fb-46e9-46af-bb4e-ec1f4d1d2208",
+  "providerState": {
+    "providerSessionId": "5f67f2fb-46e9-46af-bb4e-ec1f4d1d2208"
+  },
+  "currentNote": "未命名.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 8823,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 22400,
+    "contextWindow": 200000,
+    "contextTokens": 31223,
+    "percentage": 16
+  }
+}
