@@ -4,6 +4,19 @@
   "title": "Organize file, add insights, verify correctness",
   "titleGenerationStatus": "success",
   "createdAt": 1788514365362,
-  "updatedAt": 1788514371106,
-  "sessionId": null
+  "updatedAt": 1788514851207,
+  "lastResponseAt": 1788514851207,
+  "sessionId": "4799c3c5-3f17-428a-b902-aa94cff390b8",
+  "providerState": {
+    "providerSessionId": "4799c3c5-3f17-428a-b902-aa94cff390b8"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 9991,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 54272,
+    "contextWindow": 200000,
+    "contextTokens": 64263,
+    "percentage": 32
+  }
 }
