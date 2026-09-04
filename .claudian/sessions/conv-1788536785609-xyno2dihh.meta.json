@@ -4,8 +4,8 @@
   "title": "整理PMP项目范围管理文件核心内容",
   "titleGenerationStatus": "success",
   "createdAt": 1788536785609,
-  "updatedAt": 1788537963208,
-  "lastResponseAt": 1788537963208,
+  "updatedAt": 1788539713542,
+  "lastResponseAt": 1788539713542,
   "sessionId": "15116f25-57e5-4d7f-b936-7f81b7dbefd5",
   "providerState": {
     "providerSessionId": "15116f25-57e5-4d7f-b936-7f81b7dbefd5"
@@ -13,12 +13,12 @@
   "currentNote": "PMP项目范围管理.md",
   "usage": {
     "model": "opus",
-    "inputTokens": 26326,
+    "inputTokens": 2864,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 32512,
+    "cacheReadInputTokens": 64512,
     "contextWindow": 200000,
-    "contextTokens": 58838,
-    "percentage": 29,
+    "contextTokens": 67376,
+    "percentage": 34,
     "contextWindowIsAuthoritative": true
   }
 }
