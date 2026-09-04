@@ -4,8 +4,8 @@
   "title": "整理PMP项目进度管理文件核心内容",
   "titleGenerationStatus": "success",
   "createdAt": 1788532703522,
-  "updatedAt": 1788532887088,
-  "lastResponseAt": 1788532887088,
+  "updatedAt": 1788533723661,
+  "lastResponseAt": 1788533723661,
   "sessionId": "95e55a8e-5c74-4ba0-ab3a-ec491bb10052",
   "providerState": {
     "providerSessionId": "95e55a8e-5c74-4ba0-ab3a-ec491bb10052"
@@ -13,11 +13,11 @@
   "currentNote": "PMP项目进度管理.md",
   "usage": {
     "model": "opus",
-    "inputTokens": 6445,
+    "inputTokens": 193,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 25728,
+    "cacheReadInputTokens": 34048,
     "contextWindow": 200000,
-    "contextTokens": 32173,
-    "percentage": 16
+    "contextTokens": 34241,
+    "percentage": 17
   }
 }
