@@ -4,6 +4,20 @@
   "title": "Organize current file using PMP standards",
   "titleGenerationStatus": "success",
   "createdAt": 1788540337554,
-  "updatedAt": 1788540345830,
-  "sessionId": null
+  "updatedAt": 1788540679683,
+  "lastResponseAt": 1788540679683,
+  "sessionId": "859c1b01-88e3-435b-9043-963d4ceb5610",
+  "providerState": {
+    "providerSessionId": "859c1b01-88e3-435b-9043-963d4ceb5610"
+  },
+  "currentNote": "未命名.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 120,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 45824,
+    "contextWindow": 200000,
+    "contextTokens": 45944,
+    "percentage": 23
+  }
 }
