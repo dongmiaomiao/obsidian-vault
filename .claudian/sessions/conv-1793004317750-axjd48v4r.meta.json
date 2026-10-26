@@ -4,13 +4,12 @@
   "title": "Organize current file, confirm before edits",
   "titleGenerationStatus": "success",
   "createdAt": 1793004317751,
-  "updatedAt": 1793004543519,
+  "updatedAt": 1793026709148,
   "lastResponseAt": 1793004543519,
   "sessionId": "6d986a48-e09f-4fda-aaff-5700dc8aa90b",
   "providerState": {
     "providerSessionId": "6d986a48-e09f-4fda-aaff-5700dc8aa90b"
   },
-  "currentNote": "PMP项目范围管理.md",
   "usage": {
     "model": "opus",
     "inputTokens": 2546,
