@@ -4,6 +4,20 @@
   "title": "整理当前文件内容并标注存疑之处",
   "titleGenerationStatus": "success",
   "createdAt": 1793026764952,
-  "updatedAt": 1793026767867,
-  "sessionId": null
+  "updatedAt": 1793027333005,
+  "lastResponseAt": 1793027333005,
+  "sessionId": "38eab382-f715-46c2-9e4c-d966f47dc89b",
+  "providerState": {
+    "providerSessionId": "38eab382-f715-46c2-9e4c-d966f47dc89b"
+  },
+  "currentNote": "PMP采购管理.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 101,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 47104,
+    "contextWindow": 200000,
+    "contextTokens": 47205,
+    "percentage": 24
+  }
 }
