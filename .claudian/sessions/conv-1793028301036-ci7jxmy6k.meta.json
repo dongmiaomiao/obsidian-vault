@@ -4,19 +4,19 @@
   "title": "整理PMP项目管理文件并制定方案建议",
   "titleGenerationStatus": "success",
   "createdAt": 1793028301036,
-  "updatedAt": 1793030298230,
-  "lastResponseAt": 1793030298230,
+  "updatedAt": 1793030766508,
+  "lastResponseAt": 1793030766508,
   "sessionId": "1e5fe2e3-b80f-4c6b-ba6a-8faa2d081d7c",
   "providerState": {
     "providerSessionId": "1e5fe2e3-b80f-4c6b-ba6a-8faa2d081d7c"
   },
   "usage": {
     "model": "opus",
-    "inputTokens": 540,
+    "inputTokens": 12289,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 87808,
+    "cacheReadInputTokens": 89344,
     "contextWindow": 200000,
-    "contextTokens": 88348,
-    "percentage": 44
+    "contextTokens": 101633,
+    "percentage": 51
   }
 }
