@@ -4,6 +4,20 @@
   "title": "Organize current file content without changes",
   "titleGenerationStatus": "success",
   "createdAt": 1793000348331,
-  "updatedAt": 1793000354251,
-  "sessionId": null
+  "updatedAt": 1793000530158,
+  "lastResponseAt": 1793000530158,
+  "sessionId": "9a91cdfa-ad5d-4a4e-9106-03aef98e5d19",
+  "providerState": {
+    "providerSessionId": "9a91cdfa-ad5d-4a4e-9106-03aef98e5d19"
+  },
+  "currentNote": "PMP项目进度管理.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 57,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 34176,
+    "contextWindow": 200000,
+    "contextTokens": 34233,
+    "percentage": 17
+  }
 }
