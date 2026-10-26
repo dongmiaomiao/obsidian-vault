@@ -4,19 +4,19 @@
   "title": "Review PMP project files for content issues",
   "titleGenerationStatus": "success",
   "createdAt": 1793032289787,
-  "updatedAt": 1793032494479,
-  "lastResponseAt": 1793032494479,
+  "updatedAt": 1793033373208,
+  "lastResponseAt": 1793033373208,
   "sessionId": "e0ea0f60-0dcf-4df0-a93b-5d406f08fd79",
   "providerState": {
     "providerSessionId": "e0ea0f60-0dcf-4df0-a93b-5d406f08fd79"
   },
   "usage": {
     "model": "opus",
-    "inputTokens": 720,
+    "inputTokens": 233,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 71552,
+    "cacheReadInputTokens": 89856,
     "contextWindow": 200000,
-    "contextTokens": 72272,
-    "percentage": 36
+    "contextTokens": 90089,
+    "percentage": 45
   }
 }
