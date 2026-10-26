@@ -1,0 +1,22 @@
+{
+  "id": "conv-1793031933540-qtc26qo6b",
+  "providerId": "claude",
+  "title": "Organize current file content",
+  "titleGenerationStatus": "success",
+  "createdAt": 1793031933540,
+  "updatedAt": 1793032180884,
+  "lastResponseAt": 1793032112285,
+  "sessionId": "faa07cda-a132-4012-aca8-7781c0e1fe5b",
+  "providerState": {
+    "providerSessionId": "faa07cda-a132-4012-aca8-7781c0e1fe5b"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 12848,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 48256,
+    "contextWindow": 200000,
+    "contextTokens": 61104,
+    "percentage": 31
+  }
+}
