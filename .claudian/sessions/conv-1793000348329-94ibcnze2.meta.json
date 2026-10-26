@@ -4,13 +4,12 @@
   "title": "Organize current file content without changes",
   "titleGenerationStatus": "success",
   "createdAt": 1793000348331,
-  "updatedAt": 1793000530158,
+  "updatedAt": 1793004244040,
   "lastResponseAt": 1793000530158,
   "sessionId": "9a91cdfa-ad5d-4a4e-9106-03aef98e5d19",
   "providerState": {
     "providerSessionId": "9a91cdfa-ad5d-4a4e-9106-03aef98e5d19"
   },
-  "currentNote": "PMP项目进度管理.md",
   "usage": {
     "model": "opus",
     "inputTokens": 57,

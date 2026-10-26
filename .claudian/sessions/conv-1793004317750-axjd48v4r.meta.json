@@ -1,0 +1,23 @@
+{
+  "id": "conv-1793004317750-axjd48v4r",
+  "providerId": "claude",
+  "title": "Organize current file, confirm before edits",
+  "titleGenerationStatus": "success",
+  "createdAt": 1793004317751,
+  "updatedAt": 1793004543519,
+  "lastResponseAt": 1793004543519,
+  "sessionId": "6d986a48-e09f-4fda-aaff-5700dc8aa90b",
+  "providerState": {
+    "providerSessionId": "6d986a48-e09f-4fda-aaff-5700dc8aa90b"
+  },
+  "currentNote": "PMP项目范围管理.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 2546,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 36992,
+    "contextWindow": 200000,
+    "contextTokens": 39538,
+    "percentage": 20
+  }
+}
