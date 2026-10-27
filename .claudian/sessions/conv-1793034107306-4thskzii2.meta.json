@@ -4,6 +4,19 @@
   "title": "整理PMP风险管理文件内容",
   "titleGenerationStatus": "success",
   "createdAt": 1793034107307,
-  "updatedAt": 1793034110260,
-  "sessionId": null
+  "updatedAt": 1793034223796,
+  "lastResponseAt": 1793034198890,
+  "sessionId": "ed311727-fc98-46f6-bc82-cdd67c1817d5",
+  "providerState": {
+    "providerSessionId": "ed311727-fc98-46f6-bc82-cdd67c1817d5"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 80,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 31232,
+    "contextWindow": 200000,
+    "contextTokens": 31312,
+    "percentage": 16
+  }
 }

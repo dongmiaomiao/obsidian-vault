@@ -1,0 +1,22 @@
+{
+  "id": "conv-1793034244630-m2nr0110n",
+  "providerId": "claude",
+  "title": "Organize PMP project communication management",
+  "titleGenerationStatus": "success",
+  "createdAt": 1793034244630,
+  "updatedAt": 1793034457566,
+  "lastResponseAt": 1793034457566,
+  "sessionId": "1dd1d214-95fd-4b6d-86b4-e2bf7f2bcd38",
+  "providerState": {
+    "providerSessionId": "1dd1d214-95fd-4b6d-86b4-e2bf7f2bcd38"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 79,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 40960,
+    "contextWindow": 200000,
+    "contextTokens": 41039,
+    "percentage": 21
+  }
+}
